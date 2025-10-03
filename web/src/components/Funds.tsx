@@ -21,7 +21,7 @@ const Funds = () => {
       <div className='mt-0 text-sm text-gray-600'>
         Symbol: <span className='font-mono text-blue-700'>{selectedFund?.symbol}</span>
         <br />
-        Address: <span className='font-mono text-blue-700'>{selectedFund?.address}</span>
+        Address: <span className='font-mono text-blue-700'><a href={`https://hashscan.io/testnet/token/${selectedFund?.address}`} target="_blank" rel="noopener noreferrer">{selectedFund?.address}</a></span>
         <br />
         Network: <span className='font-mono text-blue-700'>hedera.{selectedFund?.network}</span>
       </div>

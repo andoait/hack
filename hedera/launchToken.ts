@@ -12,8 +12,9 @@ async function launchTokens() {
       .setTokenType(TokenType.FungibleCommon)
       .setDecimals(0)
       .setInitialSupply(21_000_000)
+      .setMaxSupply(21_000_000)
       .setTreasuryAccountId(operatorAccountId)
-      .setSupplyType(TokenSupplyType.Infinite)
+      .setSupplyType(TokenSupplyType.Finite)
       .setKycKey(operatorKey.publicKey) // KYC flag enabled
       .freezeWith(client)
       .sign(operatorKey)
