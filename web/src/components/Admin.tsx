@@ -72,7 +72,7 @@ const Admin = () => {
         <HederaAddressInput />
 
         <label className='block mb-0 mt-12 text-lg font-bold text-gray-700'>
-          Corporate Entity Verification
+          Corporate entity verification
         </label>
         
         {toggleLabels.map((item, idx) => (
