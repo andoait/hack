@@ -19,16 +19,15 @@ const funds = [
 ]
 
 const toggleLabels = [
-  {title: 'Verify Identity', hint: 'Requires Government ID (e.g. passport, driver\'s license)'},
-  {title: 'Has Corporate Authority', hint: 'Requires documentation proving corporate authority'},
+  {title: 'Verify Individual\'s Identity', hint: 'Requires Government ID (e.g. passport, driver\'s license)'},
+  {title: 'Individual has Corporate Authority', hint: 'Requires documentation proving corporate authority'},
   {title: 'Verified not on an AML list', hint: 'Confirms entity is not on Anti-Money Laundering lists'},
   {title: 'Verified not on a sanctions list', hint: 'Confirms entity is not on sanctions lists'},
   {title: 'Verified not a PEP', hint: 'Confirms entity is not a Politically Exposed Person'},
   {title: 'Verified not on a fraud watchlist', hint: 'Confirms entity is not on fraud watchlists'},
   {title: 'Verified not on a high risk list', hint: 'Confirms entity is not on high risk lists'},
   {title: 'Verified not a tax haven', hint: 'Confirms entity is not a tax haven'},
-  {title: 'Verified not a shell company', hint: 'Confirms entity is not a shell company'},
-  {title: 'Show Advanced Settings', hint: 'Displays additional verification options'}
+  {title: 'Verified not a shell company', hint: 'Confirms entity is not a shell company'}
 ]
 
 export {
