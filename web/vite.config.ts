@@ -8,9 +8,16 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  base: '/hack/', // Replace 'hack' with your repository name
+  base: '/', // Your repo name
   build: {
     outDir: 'dist',
-    assetsDir: 'assets'
+    assetsDir: 'assets',
+    rollupOptions: {
+      // Copy 404.html to root for GitHub Pages SPA routing
+      input: {
+        main: './index.html'
+        // 404: './public/404.html'
+      }
+    }
   }
 })
