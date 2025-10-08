@@ -5,11 +5,11 @@ const operatorKeyType: hederaKeyType = 'ed25519'
 const network: hederaNetwork = 'testnet'
 
 const funds = [
-  { name: 'Gold Fund', symbol: 'GOLD_STEX', address: '0.0.6975418', network: 'testnet' },
-  { name: 'AI Asia Fund', symbol: 'AI_ASIA_STEX', address: '0.0.6975419', network: 'testnet' },
-  { name: 'Mining Fund', symbol: 'MINING_STEX', address: '0.0.6975421', network: 'testnet' },
-  { name: 'Rare Earth Metals Fund', symbol: 'RARE_EARTH_STEX', address: '0.0.6975422', network: 'testnet' },
-  { name: 'Quantum Computing Fund', symbol: 'QUANTUM_STEX', address: '0.0.6975423', network: 'testnet' }
+  { name: 'Gold Fund', symbol: 'GOLD_STEX', address: '0.0.6975418', network: 'testnet', description: 'A diversified fund with exposure to physical gold, senior/junior miners, gold derivatives (including options) and global venue exposure (London, Shanghai, Switzerland, etc.)' },
+  { name: 'AI Asia Fund', symbol: 'AI_ASIA_STEX', address: '0.0.6975419', network: 'testnet', description: 'Exposure to new and emerging AI companies in Asia. No more than 50% exposure to China.' },
+  { name: 'Mining Fund', symbol: 'MINING_STEX', address: '0.0.6975421', network: 'testnet', description: 'Provides exposure to a diversified portfolio of mining companies, including precious metals, base metals, and industrial minerals.' },
+  { name: 'Rare Earth Metals Fund', symbol: 'RARE_EARTH_STEX', address: '0.0.6975422', network: 'testnet', description: 'Focused on companies involved in the extraction and processing of rare earth metals.' },
+  { name: 'Quantum Computing Fund', symbol: 'QUANTUM_STEX', address: '0.0.6975423', network: 'testnet', description: 'Companies developing quantum computing technologies and applications.' }
 ]
 
 const toggleLabels = [

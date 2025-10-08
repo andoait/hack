@@ -12,15 +12,19 @@ const Home = () => {
             Welcome to the Stockhome Token Exchange (STEX) platform
           </h2>
           
-          <p className="text-md text-gray-700 mb-6">
-            Securely trade regulated tokenized funds
-          </p>
+          <div className="text-md text-gray-700 mb-6">
+            <p className='mb-6'>
+              A venue to securely trade regulated tokenized funds with transaction finality in less than 3 seconds.
+            </p>
 
-          <p className="text-gray-600 mb-8">
-            While ERC-1400 is the unified standard for security tokens, it lacks the foundation to support all details of the asset on-chain; forcing issuers to maintain data and actions off-chain.
+            <p className='mb-6'>
+              STEX uses <b>next-generation digital identity</b> (<a href='https://github.com/decentralized-identity/keri'>KERI</a>), the gold standard for compliance, for all of its tokenized security tokens.
+            </p>
 
-            Our platform reduces risk and operational complexities by improving on the basic ERC-1400 standard. We enable users to keep the entire asset lifecycle on-ledger, including ownership of assets, compliance components like KYC and whitelisting, document handling, and notifications.
-          </p>
+            <p className='mb-6'>
+              Holders of STEX-issued tokens can be assured that their investments are compliant with regulations and that their identity information is secure and private. Unlike tokenization platforms currently in use, STEX's next-generation identity protection layer makes it impossible for unregulated entities to transfer tokens.
+            </p>
+          </div>
 
           {/* Call to Action Section */}
           <div className="bg-blue-50 rounded-lg p-6 mb-8">
@@ -37,6 +41,9 @@ const Home = () => {
           </div>
 
           {/* Features Grid */}
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            Available tokenized funds
+          </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {funds.map((fund, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm border">
@@ -44,7 +51,7 @@ const Home = () => {
                   {fund.name}
                 </h4>
                 <p className="text-gray-600 mb-3">
-                  {fund.name}
+                  {fund.description}
                 </p>
                 {fund.symbol && (
                   <p className="text-sm text-green-600 font-medium">
@@ -56,6 +63,38 @@ const Home = () => {
               </div>
             ))}
           </div>
+
+          {/* Why Hedera Section */}
+           <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            Why native Hedera tokens and not Ethereum-based smart contracts?
+          </h3>
+          <div className="border-blue-600 rounded-lg shadow-md border p-8 mb-8">
+           
+
+            <p className="text-gray-700 mb-4">
+              Hedera's Token Service (HTS) provides native fungible tokens without needing a smart contract.
+            </p>
+
+            <p className="text-gray-700 mb-3">HTS tokens exhibit the following features:</p>
+
+            <ul className="list-disc list-inside text-gray-700 mb-4 space-y-1">
+              <li>Integrated at the protocol level</li>
+              <li>Comprehensively tested and verified using formal methods</li>
+              <li>Managed via API calls (REST, gRPC)</li>
+              <li>Low-cost, USD-denominated, predictable transaction fees that execute in finality within seconds</li>
+              <li>Hedera isn't governed by anonymous miners or token whales. Only known, regulated, global-scale organisations can provide consensus to the network</li>
+              <li>Hedera is governed by a global council of up to 39 major organizations, each from different industries and regions</li>
+            </ul>
+
+            <p className="text-gray-600 border-t pt-4">
+              While ERC-1400 is the unified standard for security tokens, it lacks the foundation to support all details of the asset on-chain; forcing issuers to maintain data and actions off-chain.
+            </p>
+
+            <p className="text-gray-600 mt-3">
+              STEX has reduced risk and operational complexities by improving on the basic ERC-1400 standard. The entire asset lifecycle is kept private and verifiable against a public ledger, including ownership of assets, compliance components like KYC and whitelisting, document handling, and notifications.
+            </p>
+          </div>
+
         </div>
       </main>
     </>

@@ -3,6 +3,7 @@ import { toggleLabels } from '../constants'
 import { useAppContext } from '../AppProvider'
 import Funds from './Funds'
 import HederaAddressInput from './HederaAddressInput'
+import Chatbot from './Chatbot'
 
 const Admin = () => {
   const {toggles } = useAppContext()
@@ -187,6 +188,11 @@ const Admin = () => {
           Email client requesting missing information
         </button>
     </aside>
+
+    {/* Chatbot - fixed position at bottom right */}
+    <div className="fixed bottom-4 right-4 z-50">
+      <Chatbot />
+    </div>
   </div>
 )
     </>
