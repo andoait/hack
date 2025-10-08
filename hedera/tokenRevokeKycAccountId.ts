@@ -30,3 +30,5 @@ const ACCOUNT_ID = '0.0.6941561'
 ;(async () => {
   await revoke(TOKEN_ID, ACCOUNT_ID)
 })()
+
+export default revoke

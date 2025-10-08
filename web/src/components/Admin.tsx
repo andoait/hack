@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router'
-import { toggleLabels } from '../constants'
+import { identityNetwork } from '../constants'
 import { useAppContext } from '../AppProvider'
 import Funds from './Funds'
 import HederaAddressInput from './HederaAddressInput'
@@ -74,8 +74,8 @@ const Admin = () => {
         <label className='block mb-2 mt-12 text-xl font-bold text-gray-700'>
           3. Credential verification
         </label>
-        
-        {toggleLabels.map((item, idx) => (
+
+        {identityNetwork.map((item, idx) => (
           <div key={item.title} className='flex flex-col gap-2 mb-6'>
             <div className='flex items-center'>
               <div className={`flex-1 ${toggles[idx] ? 'opacity-50 pointer-events-none' : ''}`}>
@@ -157,7 +157,7 @@ const Admin = () => {
           Next
         </button>
         <div className="mb-4 text-gray-700 text-sm">
-          Progress: {toggledCount} / {toggleLabels.length}
+          Progress: {toggledCount} / {identityNetwork.length}
         </div>
         </div>
     </main>
@@ -171,7 +171,7 @@ const Admin = () => {
 
         <br/>
         <br/>
-        {toggleLabels.filter((_, idx) => { return !toggles[idx] }).map((item, idx) => {
+        {identityNetwork.filter((_, idx) => { return !toggles[idx] }).map((item, idx) => {
           return (
             <span key={idx}>
               - {item.title} <br/>

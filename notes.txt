@@ -13,7 +13,7 @@ ClientX 0.0.6941611
 
 
 Issuers (no credential registries):
-UK Gov
+UK Government
 GLEIF
 LSEG Risk Intelligence
 

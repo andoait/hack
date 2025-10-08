@@ -10,6 +10,9 @@ export default function HederaAddressInput({
   const [value, setValue] = useState("")
   const [touched, setTouched] = useState(false)
 
+  // Suggested addresses
+  const suggestedAddresses = ['0.0.6941561', '0.0.6941568', '0.0.6941611']
+
   // validators
   const isAccountId = (s: string): boolean => {
     if (!/^\d+\.\d+\.\d+$/.test(s)) return false
@@ -77,7 +80,13 @@ export default function HederaAddressInput({
         onChange={(e) => setValue(e.target.value)}
         onBlur={() => setTouched(true)}
         className={inputClass}
+        list="suggested-addresses" // Link to the datalist
       />
+      <datalist id="suggested-addresses">
+        {suggestedAddresses.map((address) => (
+          <option key={address} value={address} />
+        ))}
+      </datalist>
 
       <div className="mt-2 text-sm">
         {touched && !valid ? (

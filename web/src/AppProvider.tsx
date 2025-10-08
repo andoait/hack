@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react'
-import { toggleLabels } from './constants'
+import { identityNetwork } from './constants'
 
 // 1. Define a type for your context
 interface AppContextType {
@@ -21,7 +21,7 @@ const useAppContext = () => {
 // 3. Build the provider with real state
 const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [toggles, setToggles] = useState<boolean[]>(Array(toggleLabels.length).fill(false))
+  const [toggles, setToggles] = useState<boolean[]>(Array(identityNetwork.length).fill(false))
 
   return (
     <AppContext.Provider

@@ -18,7 +18,7 @@ const Home = () => {
             </p>
 
             <p className='mb-6'>
-              STEX uses <b>next-generation digital identity</b> (<a href='https://github.com/decentralized-identity/keri' className='text-blue-600 hover:text-blue-800 underline'>KERI</a>), featuring public keys anchored to a DLT and verifiable key chains, the gold standard for compliance, for all of its tokenized security tokens.
+              STEX uses <b>next-generation digital identity</b> (<a href='https://github.com/WebOfTrust/keri' className='text-blue-600 hover:text-blue-800 underline'>KERI</a>), featuring public keys anchored to a DLT and verifiable key chains, the gold standard for compliance, for all of its tokenized security tokens.
             </p>
 
             <p className='mb-6'>
