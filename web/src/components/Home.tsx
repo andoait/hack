@@ -76,7 +76,7 @@ const Home = () => {
 
           {/* Why Hedera Section */}
            <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Why native Hedera tokens and not Ethereum-based smart contracts?
+            Why native Hedera tokens?
           </h3>
           <div className="border-blue-600 rounded-lg shadow-md border p-8 mb-8">
            
@@ -93,7 +93,7 @@ const Home = () => {
               <li>Managed via API calls (REST, gRPC)</li>
               <li>Low-cost, USD-denominated, predictable transaction fees that execute in finality within seconds</li>
               <li>Hedera isn't governed by anonymous miners or token whales. Only known, regulated, global-scale organisations can provide consensus to the network</li>
-              <li>Hedera is governed by a global council of up to 39 major organizations, each from different industries and regions</li>
+              <li>Hedera is governed by a global council of up to 39 major organizations, each from different industries and global regions</li>
             </ul>
 
             {/* <p className="text-gray-600 border-t pt-4">
