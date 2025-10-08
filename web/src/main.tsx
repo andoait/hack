@@ -8,7 +8,7 @@ import AppProvider from './AppProvider.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/hack"> {/* also see vite.config.ts */}
       <AppProvider>
         <Header />
         <Main />
