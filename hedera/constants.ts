@@ -13,26 +13,30 @@ const funds = [
   { name: 'Quantum Computing Fund', symbol: 'QUANTUM_STEX', address: '0.0.6975423', network: 'testnet', description: 'Companies developing quantum computing technologies and applications.' }
 ]
 
-const identityNetwork = [
+const identitiesSought = [
   {
     title: 'Verify individual\'s identity',
     hint: 'Requires Government ID (e.g. passport, driver\'s license)',
-    issuerAID: 'DJV9uZfjlUgBZtDIVNCa5TRogupTUVnfma7EOa8Ms7c1'
+    issuerAID: 'DJV9uZfjlUgBZtDIVNCa5TRogupTUVnfma7EOa8Ms7c1',
+    name: 'UK Government'
   },
   {
     title: 'Legal entity has a valid GLEIF LEI',
     hint: 'Proof is required that the corporate entity\'s Legal Entity Identifier (LEI) is valid',
-    issuerAID: 'DJV9uZfjlUgBZtDIVNCa5TRogupTUVnfma7EOa8Ms7c1'
+    issuerAID: 'DJV9uZfjlUgBZtDIVNCa5TRogupTUVnfma7EOa8Ms7c1',
+    name: 'GLEIF'
   },
   {
     title: 'Verified not on an AML list',
     hint: 'Confirms entity is not on Anti-Money Laundering lists',
-    issuerAID: 'DJV9uZfjlUgBZtDIVNCa5TRogupTUVnfma7EOa8Ms7c1'
+    issuerAID: 'DJV9uZfjlUgBZtDIVNCa5TRogupTUVnfma7EOa8Ms7c1',
+    name: 'STEX Risk Intelligence'
   },
   {
     title: 'Verified not a PEP',
     hint: 'Confirms entity is not a Politically Exposed Person',
-    issuerAID: 'DJV9uZfjlUgBZtDIVNCa5TRogupTUVnfma7EOa8Ms7c1'
+    issuerAID: 'DJV9uZfjlUgBZtDIVNCa5TRogupTUVnfma7EOa8Ms7c1',
+    name: 'STEX Risk Intelligence'
   }
 ]
 
@@ -41,6 +45,6 @@ export {
   auditTopicId,
   operatorKeyType,
   network,
-  identityNetwork,
+  identitiesSought,
   funds
 }

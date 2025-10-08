@@ -1,12 +1,12 @@
 import { createContext, useContext, useState } from 'react'
-import { identityNetwork } from './constants'
+import { identitiesSought } from './constants'
 
 // 1. Define a type for your context
 interface AppContextType {
   isLoggedIn: boolean
   setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>
-  toggles: boolean[]
-  setToggles: React.Dispatch<React.SetStateAction<boolean[]>>
+  isToggled: boolean[]
+  setIsToggled: React.Dispatch<React.SetStateAction<boolean[]>>
 }
 
 // 2. Create the context with `undefined` (so we can inject real values later)
@@ -21,15 +21,15 @@ const useAppContext = () => {
 // 3. Build the provider with real state
 const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [toggles, setToggles] = useState<boolean[]>(Array(identityNetwork.length).fill(false))
+  const [isToggled, setIsToggled] = useState<boolean[]>(Array(identitiesSought.length).fill(false))
 
   return (
     <AppContext.Provider
       value={{
         isLoggedIn,
         setIsLoggedIn,
-        toggles,
-        setToggles,
+        isToggled,
+        setIsToggled,
       }}
     >
       {children}

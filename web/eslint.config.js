@@ -26,6 +26,7 @@ export default defineConfig([
       '@typescript-eslint/comma-dangle': ['error', 'never'], // TS-specific
       'quotes': ['error', 'single', { avoidEscape: true }],  // enforce single quotes
       '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true }], // TS-specific
+      'import/newline-after-import': 'error' // Optional for better import formatting
     }
   }
 ])

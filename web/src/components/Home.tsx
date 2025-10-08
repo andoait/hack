@@ -18,7 +18,7 @@ const Home = () => {
             </p>
 
             <p className='mb-6'>
-              STEX uses <b>next-generation digital identity</b> (<a href='https://github.com/WebOfTrust/keri' className='text-blue-600 hover:text-blue-800 underline'>KERI</a>), featuring public keys anchored to a DLT and verifiable key chains, the gold standard for compliance, for all of its tokenized security tokens.
+              STEX uses <b>next-generation digital identity</b> (<a href='https://github.com/WebOfTrust/keri' className='text-blue-600 hover:text-blue-800 underline'>KERI</a>), featuring public keys anchored to a DLT and verifiable key chains, the gold standard for compliance, for all of its tokenized securities.
             </p>
 
             <p className='mb-6'>
@@ -35,7 +35,7 @@ const Home = () => {
               Ready to begin? Explore the features and start using the application.
             </p>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition-colors cursor-pointer"
-              onClick={() => { navigate('/login')}}>
+              onClick={() => { navigate('/menu')}}>
               Start Now
             </button>
           </div>

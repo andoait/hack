@@ -1,12 +1,14 @@
 import { useNavigate } from 'react-router'
-import { identityNetwork } from '../constants'
+import { identitiesSought } from '../constants'
 import { useAppContext } from '../AppProvider'
 import Funds from './Funds'
 import HederaAddressInput from './HederaAddressInput'
 import Chatbot from './Chatbot'
+import CredentialVerifyLog from './CredentialVerifyLog'
+import { useEffect } from 'react'
 
 const Admin = () => {
-  const {toggles } = useAppContext()
+  const { isToggled } = useAppContext()
   // const [evidence, setEvidence] = useState(Array(toggleLabels.length).fill(null))
   // const [showComment, setShowComment] = useState(Array(toggleLabels.length).fill(false))
   // const [comments, setComments] = useState(Array(toggleLabels.length).fill(''))
@@ -37,164 +39,102 @@ const Admin = () => {
   //   )
   // }
 
-  const allToggled = toggles.every(Boolean)
-  const toggledCount = toggles.filter(Boolean).length
+  const allToggled = isToggled.every(Boolean)
+  const toggledCount = isToggled.filter(Boolean).length
+
+  useEffect(() => {
+    console.log(isToggled)
+  }, [])
 
   return (
     <>
-  <div className="grid grid-cols-12 gap-6 p-8">
-    {/* LEFT COLUMN */}
-    {/* <aside className="col-span-3 bg-gray-50 rounded-lg p-4 shadow">
-      <h3 className="font-bold text-lg mb-2">Left Column</h3>
-      <ul className="space-y-2 text-sm text-gray-700">
-        <li>Navigation link</li>
-        <li>Helper text</li>
-        <li>Status info</li>
-      </ul>
-    </aside> */}
+      <div className="grid grid-cols-12 gap-6 p-8">
+        {/* LEFT COLUMN */}
+        {/* <aside className="col-span-3 bg-gray-50 rounded-lg p-4 shadow">
+          <h3 className="font-bold text-lg mb-2">Left Column</h3>
+          <ul className="space-y-2 text-sm text-gray-700">
+            <li>Navigation link</li>
+            <li>Helper text</li>
+            <li>Status info</li>
+          </ul>
+        </aside> */}
 
-    {/* CENTER COLUMN */}
-    <main className="col-span-8">
-      <div className="max-w-2xl mx-auto">
-        <div className="flex items-center mb-2">
-          <Shield />
-          <h2 className="text-2xl font-bold">Administration Panel</h2>
-        </div>
-
-        <label className="block mb-2 mt-6 text-xl font-bold text-gray-700">
-          1. Select STEX Tokenized Fund
-        </label>
-        <Funds />
-
-        <label className="block mb-0 mt-12 text-xl font-bold text-gray-700">
-          2. Corporate entity DLT account address
-        </label>
-        <HederaAddressInput />
-
-        <label className='block mb-2 mt-12 text-xl font-bold text-gray-700'>
-          3. Credential verification
-        </label>
-
-        {identityNetwork.map((item, idx) => (
-          <div key={item.title} className='flex flex-col gap-2 mb-6'>
-            <div className='flex items-center'>
-              <div className={`flex-1 ${toggles[idx] ? 'opacity-50 pointer-events-none' : ''}`}>
-                <label className='text-lg'>{item.title}</label>
-                <div className='text-xs text-gray-500'>{item.hint}</div>
-              </div>
-
-              <input type="text" className="w-100 mt-2 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="credential AID" />
-              <br/>
+        {/* CENTER COLUMN */}
+        <main className="col-span-8">
+          <div className="max-w-2xl mx-auto">
+            <div className="flex items-center mb-2">
+              <Shield />
+              <h2 className="text-2xl font-bold">Administration Panel</h2>
             </div>
 
-            
-            {/* Manual method: <button
-              type='button'
-              onClick={() => handleToggle(idx)}
-              className={`relative inline-flex h-6 w-12 items-center rounded-full transition-colors focus:outline-none ${
-                toggles[idx] ? 'bg-green-500' : 'bg-gray-300'
+            <label className="block mb-2 mt-6 text-xl font-bold text-gray-700">
+              1. Select STEX Tokenized Fund
+            </label>
+            <Funds />
+
+            <label className="block mb-0 mt-12 text-xl font-bold text-gray-700">
+              2. Corporate entity DLT account address
+            </label>
+            <HederaAddressInput />
+
+            <label className='block mb-2 mt-12 text-xl font-bold text-gray-700'>
+              3. Credential verification
+            </label>
+
+            {identitiesSought.map((_, idx) => (
+              <CredentialVerifyLog key={idx} idx={idx} />
+            ))}
+
+            <button
+              type="button"
+              className={`w-full py-2 mt-4 rounded text-white font-bold transition-colors ${
+                allToggled
+                  ? 'hover:bg-blue-700 bg-blue-600 cursor-pointer'
+                  : 'bg-blue-300 cursor-not-allowed'
               }`}
-              aria-pressed={toggles[idx]}
+              disabled={!allToggled}
+              onClick={() => navigate('/admin/verifySummary')}
             >
-              <span
-                className={`inline-block h-5 w-5 transform rounded-full bg-white transition-transform ${
-                  toggles[idx] ? 'translate-x-6' : 'translate-x-1'
-                }`}
-              />
+              Next
             </button>
-            */ }
-            {/* Plus button for comments */}
-            {/* <button
-              type='button'
-              className={`ml-2 p-2 bg-blue-100 hover:bg-blue-200 text-blue-600 transition-colors rounded-full ${toggles[idx] ? 'opacity-50 pointer-events-none' : ''}`}
-              onClick={() => handleShowComment(idx)}
-              aria-label='Add comment'
-              disabled={toggles[idx]}
-            >
-              <svg className='w-5 h-5' fill='none' stroke='currentColor' strokeWidth={2} viewBox='0 0 24 24'>
-                <path strokeLinecap='round' strokeLinejoin='round' d='M12 6v12m6-6H6' />
-              </svg>
-            </button>
-            {showComment[idx] && (
-              <> */}
-              {/* Evidence upload */}
-              {/* <label className={`ml-4 flex items-center cursor-pointer ${toggles[idx] ? 'opacity-50 pointer-events-none' : ''}`}>
-                <span className='text-sm text-blue-600 bg-blue-50 px-2 py-1 rounded'>
-                  {evidence[idx]?.name || 'Attach evidence'}
+            <div className="mb-4 text-gray-700 text-sm">
+              Progress: {toggledCount} / {identitiesSought.length}
+            </div>
+            </div>
+        </main>
+
+        {/* RIGHT COLUMN */}
+        <aside className="col-span-3 bg-gray-50 rounded-lg p-4 shadow">
+          {/* <div className="mt-80"></div> */}
+          <h3 className="font-bold text-lg mb-2">Missing credentials</h3>
+          <p className="text-sm text-gray-700">
+            List of missing information or actions required to complete the verification process.
+
+            <br/>
+            <br/>
+            {identitiesSought.filter((_, idx) => { return !isToggled[idx] }).map((item, idx) => {
+              return (
+                <span key={idx}>
+                  - {item.title} <br/>
                 </span>
-                <input
-                  type='file'
-                  className='hidden'
-                  onChange={e =>
-                    handleEvidenceChange(idx, e.target.files?.[0] || null)
-                  }
-                  disabled={toggles[idx]}
-                />
-              </label>
-              <textarea
-                className={`mt-2 w-full border rounded p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 ${toggles[idx] ? 'bg-gray-100 text-gray-400 cursor-not-allowed opacity-50' : ''}`}
-                rows={2}
-                placeholder='Write a comment...'
-                value={comments[idx]}
-                onChange={e => handleCommentChange(idx, e.target.value)}
-                disabled={toggles[idx]}
-              />
-              </>
-            )} */}
-          </div>
-        ))}
+              )
+            })}
+          </p>
 
-        <button
-          type="button"
-          className={`w-full py-2 mt-4 rounded text-white font-bold transition-colors ${
-            allToggled
-              ? 'hover:bg-blue-700 bg-blue-600 cursor-pointer'
-              : 'bg-blue-300 cursor-not-allowed'
-          }`}
-          disabled={!allToggled}
-          onClick={() => navigate('/admin/verifySummary')}
-        >
-          Next
-        </button>
-        <div className="mb-4 text-gray-700 text-sm">
-          Progress: {toggledCount} / {identityNetwork.length}
+          <button
+              type="button"
+              className={`w-full py-2 mt-4 rounded text-white font-bold transition-colors hover:bg-blue-700 bg-blue-600 cursor-pointer`}
+              onClick={() => navigate('/admin/verifySummary')}
+            >
+              Email client requesting missing information
+            </button>
+        </aside>
+
+        {/* Chatbot - fixed position at bottom right */}
+        <div className="fixed bottom-4 right-4 z-50">
+          <Chatbot />
         </div>
-        </div>
-    </main>
-
-    {/* RIGHT COLUMN */}
-    <aside className="col-span-3 bg-gray-50 rounded-lg p-4 shadow">
-      {/* <div className="mt-80"></div> */}
-      <h3 className="font-bold text-lg mb-2">Missing credentials</h3>
-      <p className="text-sm text-gray-700">
-        List of missing information or actions required to complete the verification process.
-
-        <br/>
-        <br/>
-        {identityNetwork.filter((_, idx) => { return !toggles[idx] }).map((item, idx) => {
-          return (
-            <span key={idx}>
-              - {item.title} <br/>
-            </span>
-          )
-        })}
-      </p>
-
-      <button
-          type="button"
-          className={`w-full py-2 mt-4 rounded text-white font-bold transition-colors hover:bg-blue-700 bg-blue-600 cursor-pointer`}
-          onClick={() => navigate('/admin/verifySummary')}
-        >
-          Email client requesting missing information
-        </button>
-    </aside>
-
-    {/* Chatbot - fixed position at bottom right */}
-    <div className="fixed bottom-4 right-4 z-50">
-      <Chatbot />
-    </div>
-  </div>
-)
+      </div>
     </>
   )
 }
