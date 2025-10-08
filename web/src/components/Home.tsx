@@ -96,12 +96,12 @@ const Home = () => {
               <li>Hedera is governed by a global council of up to 39 major organizations, each from different industries and regions</li>
             </ul>
 
-            <p className="text-gray-600 border-t pt-4">
+            {/* <p className="text-gray-600 border-t pt-4">
               While ERC-1400 is the unified standard for security tokens, it lacks the foundation to support all details of the asset on-chain; forcing issuers to maintain data and actions off-chain.
-            </p>
+            </p> */}
 
             <p className="text-gray-600 mt-3">
-              STEX has reduced risk and operational complexities by improving on the basic ERC-1400 standard. The entire asset lifecycle is kept private and verifiable against a public ledger, including ownership of assets, compliance components like KYC and whitelisting, document handling, and notifications.
+              STEX reduces risk and operational complexities by improving on the basic ERC-1400 standard. The entire asset lifecycle is kept private while being verifiable against a public ledger; including ownership of assets and compliance components such as KYC, whitelisting, document handling and event notifications.
             </p>
           </div>
 
