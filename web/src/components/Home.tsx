@@ -70,7 +70,7 @@ const Home = () => {
           </h3>
           <div className="border-blue-600 rounded-lg shadow-md border p-8 mb-8">
             <p className="text-gray-700 mb-4">
-              Lorum ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorum ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             </p>
           </div>
 
