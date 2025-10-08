@@ -8,4 +8,9 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  base: '/hack/', // Replace 'hack' with your repository name
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets'
+  }
 })
