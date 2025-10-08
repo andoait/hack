@@ -4,7 +4,10 @@ import { initHederaClient } from './utils'
 
 const [ client, operatorKey ] = initHederaClient(network, operatorAccountId, operatorKeyType)
 
-async function launchTokens() {
+const launchTokens = async () => {
+  const publicKey = operatorKey.publicKey
+  console.log(`Operator public key: ${publicKey.toString()}. Operator account ID: ${operatorAccountId}`)
+
   for (const fund of funds) {
     const transaction = await new TokenCreateTransaction()
       .setTokenName(fund.name)

@@ -1,0 +1,101 @@
+Token created: Gold Fund (GOLD_STEX) 			-> Token ID: 0.0.6975418
+Token created: AI Asia Fund (AI_ASIA_STEX) 		-> Token ID: 0.0.6975419
+Token created: Mining Fund (MINING_STEX) 		-> Token ID: 0.0.6975421
+Token created: Rare Earth Metals Fund (RARE_EARTH_STEX) -> Token ID: 0.0.6975422
+Token created: Quantum Computing Fund (QUANTUM_STEX) 	-> Token ID: 0.0.6975423
+
+
+
+
+Issuers (no credential registries):
+UK Gov
+GLEIF
+LSEG Risk Intelligence
+
+
+
+Holders (have credential registries):
+ClientA #388833
+ClientB
+ClientX
+
+
+Verifier (no credential registries):
+STEX
+
+
+
+
+
+
+Schemas
+{
+  "alias": "National ID",
+  "title": "National ID",
+  "description": "UK national ID card",
+  "schemaId": "EM5a87kmD8qFJAgVRnDOv7ij7OXG5QN9qzfmWfftwgtt",
+  "properties": {
+    "idCardNumber": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "dob": {
+      "type": "string"
+    }
+  }
+}
+
+
+{
+  "alias": "LEI",
+  "title": "LEI",
+  "description": "Legal Entity Identifier",
+  "schemaId": "EHCl1q2sZ1_KWqn3Su69JVYNQptc-ukbPL6NN0MbJILn",
+  "properties": {
+    "lei": {
+      "type": "string"
+    },
+    "legalEntityName": {
+      "type": "string"
+    },
+    "legalEntityRegistrationNumber": {
+      "type": "string"
+    },
+    "isoCountryCode": {
+      "type": "string"
+    }
+  }
+}
+
+
+{
+  "alias": "AML individual",
+  "title": "AML individual",
+  "description": "Anti money laundering credential for an individual",
+  "schemaId": "EMXNHLMwDTLhuYQH759n9N1jh9Se4PO0GvKS4aNsDsYr",
+  "properties": {
+    "isOK": {
+      "type": "boolean"
+    }
+  }
+}
+
+
+{
+  "alias": "PEP individual",
+  "title": "PEP individual",
+  "description": "Individual is not a politically exposed person",
+  "schemaId": "EDQaHnivlwZaxl-vIXnw-821lQYrPi9812iHZumi98Ce",
+  "properties": {
+    "isPEP": {
+      "type": "boolean"
+    }
+  }
+}
+
+

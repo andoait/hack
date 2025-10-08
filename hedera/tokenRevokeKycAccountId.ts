@@ -9,8 +9,7 @@ import { initHederaClient } from './utils'
 
 const [ client, operatorKey ] = initHederaClient(network, operatorAccountId, operatorKeyType)
 
-const main = async (tokenId: TokenId | string, revokeAccountId: AccountId | string) => {
-  // Build the revoke KYC transaction
+const revoke = async (tokenId: TokenId | string, revokeAccountId: AccountId | string) => {
   const revokeKycTx = await new TokenRevokeKycTransaction()
     .setAccountId(revokeAccountId)
     .setTokenId(tokenId)
@@ -25,6 +24,9 @@ const main = async (tokenId: TokenId | string, revokeAccountId: AccountId | stri
   console.log('Revoke KYC status:', receipt.status.toString())
 }
 
-(async () => {
-  await main('0.0.5099' /* Gold Fund*/, '0.0.654321')
+const TOKEN_ID = '0.0.6975418'
+const ACCOUNT_ID = '0.0.6941561'
+
+;(async () => {
+  await revoke(TOKEN_ID, ACCOUNT_ID)
 })()
