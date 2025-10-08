@@ -65,14 +65,14 @@ const Home = () => {
           </div>
 
           {/* Why KERI Section */}
-          {/* <h3 className="text-xl font-semibold text-gray-900 mb-4">
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
             Why use KERI for identity?
           </h3>
           <div className="border-blue-600 rounded-lg shadow-md border p-8 mb-8">
             <p className="text-gray-700 mb-4">
               Lorum ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-          </div> */}
+          </div>
 
           {/* Why Hedera Section */}
            <h3 className="text-xl font-semibold text-gray-900 mb-4">
