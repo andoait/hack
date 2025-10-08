@@ -4,6 +4,11 @@ Token created: Mining Fund (MINING_STEX) 		-> Token ID: 0.0.6975421
 Token created: Rare Earth Metals Fund (RARE_EARTH_STEX) -> Token ID: 0.0.6975422
 Token created: Quantum Computing Fund (QUANTUM_STEX) 	-> Token ID: 0.0.6975423
 
+DLT personas:
+STEX    0.0.6941543
+ClientA 0.0.6941561
+ClientB 0.0.6941568
+ClientX 0.0.6941611
 
 
 
