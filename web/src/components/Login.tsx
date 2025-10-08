@@ -4,7 +4,7 @@ import { useAppContext } from '../AppProvider'
 const Login = () => {
   const navigate = useNavigate()
 
-  const {isLoggedIn, setIsLoggedIn } = useAppContext()
+  const { setIsLoggedIn } = useAppContext()
 
   const handleLogin = () => {
     setIsLoggedIn(true)

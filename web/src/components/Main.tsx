@@ -4,7 +4,6 @@ import Home from './Home'
 import About from './About'
 import Login from './Login'
 import AdminVerifySummary from './AdminVerifySummary'
-import AppProvider from '../AppProvider'
 
 const Main = () => {
   return (

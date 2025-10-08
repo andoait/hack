@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useNavigate } from 'react-router'
 import { toggleLabels } from '../constants'
 import { useAppContext } from '../AppProvider'
@@ -6,36 +5,36 @@ import Funds from './Funds'
 import HederaAddressInput from './HederaAddressInput'
 
 const Admin = () => {
-  const {toggles, setToggles } = useAppContext()
-  const [evidence, setEvidence] = useState(Array(toggleLabels.length).fill(null))
-  const [showComment, setShowComment] = useState(Array(toggleLabels.length).fill(false))
-  const [comments, setComments] = useState(Array(toggleLabels.length).fill(''))
+  const {toggles } = useAppContext()
+  // const [evidence, setEvidence] = useState(Array(toggleLabels.length).fill(null))
+  // const [showComment, setShowComment] = useState(Array(toggleLabels.length).fill(false))
+  // const [comments, setComments] = useState(Array(toggleLabels.length).fill(''))
 
   const navigate = useNavigate()
 
-  const handleToggle = (index: number) => {
-    setToggles(prev =>
-      prev.map((val, i) => (i === index ? !val : val))
-    )
-  }
+  // const handleToggle = (index: number) => {
+  //   setToggles(prev =>
+  //     prev.map((val, i) => (i === index ? !val : val))
+  //   )
+  // }
 
-  const handleEvidenceChange = (index: number, file: File | null) => {
-    setEvidence(prev =>
-      prev.map((val, i) => (i === index ? file : val))
-    )
-  }
+  // const handleEvidenceChange = (index: number, file: File | null) => {
+  //   setEvidence(prev =>
+  //     prev.map((val, i) => (i === index ? file : val))
+  //   )
+  // }
 
-  const handleShowComment = (index: number) => {
-    setShowComment(prev =>
-      prev.map((val, i) => (i === index ? !val : val))
-    )
-  }
+  // const handleShowComment = (index: number) => {
+  //   setShowComment(prev =>
+  //     prev.map((val, i) => (i === index ? !val : val))
+  //   )
+  // }
 
-  const handleCommentChange = (index: number, value: string) => {
-    setComments(prev =>
-      prev.map((val, i) => (i === index ? value : val))
-    )
-  }
+  // const handleCommentChange = (index: number, value: string) => {
+  //   setComments(prev =>
+  //     prev.map((val, i) => (i === index ? value : val))
+  //   )
+  // }
 
   const allToggled = toggles.every(Boolean)
   const toggledCount = toggles.filter(Boolean).length
@@ -171,7 +170,7 @@ const Admin = () => {
 
         <br/>
         <br/>
-        {toggleLabels.filter((item, idx) => { return !toggles[idx] }).map((item, idx) => {
+        {toggleLabels.filter((_, idx) => { return !toggles[idx] }).map((item, idx) => {
           return (
             <span key={idx}>
               - {item.title} <br/>
