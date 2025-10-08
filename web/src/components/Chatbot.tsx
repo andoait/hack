@@ -14,7 +14,7 @@ const Chatbot = () => {
     setTimeout(() => {
       setChatMessages(prev => [...prev, { 
         role: 'bot' as const, 
-        message: 'I can help you gather the required credential AIDs. Please provide information about your corporate entity and I\'ll guide you through the verification process.' 
+        message: 'I can help you gather the required credential AIDs. Please provide contact information for the client you are onboarding and I\'ll guide you through the verification process.' 
       }])
     }, 1000)
     
@@ -26,7 +26,7 @@ const Chatbot = () => {
       {!showChat && (
         <button
           type="button"
-          className="w-full p-2 mt-4 rounded text-white font-bold transition-colors bg-blue-600 hover:bg-blue-700 cursor-pointer"
+          className="w-full px-4 py-2 mt-4 rounded text-white font-bold transition-colors bg-blue-700 hover:bg-blue-600 cursor-pointer"
           onClick={() => setShowChat(!showChat)}
         >
           Chat with Credential Assistant
@@ -52,7 +52,7 @@ const Chatbot = () => {
           <div className="h-64 overflow-y-auto p-3 space-y-2">
             {chatMessages.length === 0 && (
               <div className="text-sm text-gray-500 italic">
-                Hello! I'm here to help you gather the required credential AIDs for the client. Do you have the contact details of the client so I can ask them to provide their information?
+                Hello! I'm here to help you gather the required credential AIDs from the client. Do you have the contact details of the client so I can chat with them to elicit their credential information?
               </div>
             )}
             {chatMessages.map((msg, idx) => (
