@@ -18,11 +18,11 @@ const Home = () => {
             </p>
 
             <p className='mb-6'>
-              STEX uses <b>next-generation digital identity</b> (<a href='https://github.com/decentralized-identity/keri'>KERI</a>), the gold standard for compliance, for all of its tokenized security tokens.
+              STEX uses <b>next-generation digital identity</b> (<a href='https://github.com/decentralized-identity/keri' className='text-blue-600 hover:text-blue-800 underline'>KERI</a>), featuring public keys anchored to a DLT and verifiable key chains, the gold standard for compliance, for all of its tokenized security tokens.
             </p>
 
             <p className='mb-6'>
-              Holders of STEX-issued tokens can be assured that their investments are compliant with regulations and that their identity information is secure and private. Unlike tokenization platforms currently in use, STEX's next-generation identity protection layer makes it impossible for unregulated entities to transfer tokens.
+              Holders of STEX-issued tokens can be assured that their investments are compliant with regulations in all tradeable jurisdictions and that their identity information is secure and private. Unlike current-generation tokenization platforms, STEX's next-generation identity protection layer makes it impossible for unregulated entities to transfer tokens.
             </p>
           </div>
 
@@ -63,6 +63,16 @@ const Home = () => {
               </div>
             ))}
           </div>
+
+          {/* Why KERI Section */}
+          {/* <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            Why use KERI for identity?
+          </h3>
+          <div className="border-blue-600 rounded-lg shadow-md border p-8 mb-8">
+            <p className="text-gray-700 mb-4">
+              Lorum ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div> */}
 
           {/* Why Hedera Section */}
            <h3 className="text-xl font-semibold text-gray-900 mb-4">
