@@ -6,7 +6,9 @@ const verifyAuditLog = (
   actualHash: string
 ): void => {
   const raw = `${credentialId}:${aids.join(',')}`
+  
   const expectedHash = crypto.createHash('sha256').update(raw).digest('base64')
+
   console.log(`Raw message:\t\t\t${raw}`)
   console.log(`Expected hashed message:\t${expectedHash}`)
   console.log(`Actual hashed message:\t\t${actualHash}`)
