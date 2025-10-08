@@ -11,7 +11,7 @@ export default defineConfig({
   base: '/hack/', // Your repo name
   build: {
     outDir: 'dist',
-    assetsDir: 'dist',
+    assetsDir: 'assets',
     rollupOptions: {
       // Copy 404.html to root for GitHub Pages SPA routing
       input: {
