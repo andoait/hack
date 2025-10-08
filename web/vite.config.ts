@@ -1,23 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss()
-  ],
-  base: '/', // Your repo name
+  plugins: [react()],
+  base: '/hack/', // Must match your repository name
   build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    rollupOptions: {
-      // Copy 404.html to root for GitHub Pages SPA routing
-      input: {
-        main: './index.html'
-        // 404: './public/404.html'
-      }
-    }
+    outDir: 'dist'
   }
 })
