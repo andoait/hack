@@ -11,13 +11,13 @@ export default defineConfig({
   base: '/hack/', // Your repo name
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
-    rollupOptions: {
-      // Copy 404.html to root for GitHub Pages SPA routing
-      input: {
-        main: './index.html',
-        // 404: './public/404.html'
-      }
-    }
+    // assetsDir: 'assets',
+    // rollupOptions: {
+    //   // Copy 404.html to root for GitHub Pages SPA routing
+    //   input: {
+    //     main: './index.html',
+    //     // 404: './public/404.html'
+    //   }
+    // }
   }
 })
