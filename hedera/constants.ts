@@ -15,7 +15,7 @@ const funds = [
 
 const identitiesSought = [
   {
-    title: 'Verify individual\'s identity',
+    title: 'Has a valid government-issued ID',
     hint: 'Requires Government ID (e.g. passport, driver\'s license)',
     issuerAID: 'DJV9uZfjlUgBZtDIVNCa5TRogupTUVnfma7EOa8Ms7c1',
     name: 'UK Government'

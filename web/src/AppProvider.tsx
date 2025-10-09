@@ -7,6 +7,16 @@ interface AppContextType {
   setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>
   isToggled: boolean[]
   setIsToggled: React.Dispatch<React.SetStateAction<boolean[]>>
+  aids: string[],
+  setAids: React.Dispatch<React.SetStateAction<string[]>>,
+  files: (File | null)[],
+  setFiles: React.Dispatch<React.SetStateAction<(File | null)[]>>,
+  comments: string[],
+  setComments: React.Dispatch<React.SetStateAction<string[]>>
+  selectedFundIdx: number,
+  setSelectedFundIdx: React.Dispatch<React.SetStateAction<number>>
+  accountId: string
+  setAccountId: React.Dispatch<React.SetStateAction<string>>
 }
 
 // 2. Create the context with `undefined` (so we can inject real values later)
@@ -22,6 +32,11 @@ const useAppContext = () => {
 const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [isToggled, setIsToggled] = useState<boolean[]>(Array(identitiesSought.length).fill(false))
+  const [aids, setAids] = useState<string[]>(Array(identitiesSought.length).fill(''))
+  const [files, setFiles] = useState<(File | null)[]>(Array(identitiesSought.length).fill(null))
+  const [comments, setComments] = useState<string[]>(Array(identitiesSought.length).fill(''))
+  const [selectedFundIdx, setSelectedFundIdx] = useState(0)
+  const [accountId, setAccountId] = useState('')
 
   return (
     <AppContext.Provider
@@ -30,6 +45,16 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
         setIsLoggedIn,
         isToggled,
         setIsToggled,
+        aids,
+        setAids,
+        files,
+        setFiles,
+        comments,
+        setComments,
+        selectedFundIdx,
+        setSelectedFundIdx,
+        accountId,
+        setAccountId
       }}
     >
       {children}

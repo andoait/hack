@@ -4,7 +4,7 @@ import {
     TokenId,
 } from '@hashgraph/sdk'
 
-import { network, operatorAccountId, operatorKeyType } from './constants'
+import { network, operatorAccountId, operatorKeyType } from '../constants'
 import { initHederaClient } from './utils'
 
 const [ client, operatorKey ] = initHederaClient(network, operatorAccountId, operatorKeyType)

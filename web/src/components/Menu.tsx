@@ -22,6 +22,9 @@ const Menu = () => {
             <a href='#' onClick={() => navigator('/login')}>Login</a>
             <br/>
             <a href='#' onClick={() => navigator('/verifier')}>Verifier</a>
+            <br/>
+            <a href='#' onClick={() => navigator('/revoke')}>Revoke</a>
+            <br/>
           </div>
         </main>
 

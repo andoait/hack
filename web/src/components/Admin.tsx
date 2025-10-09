@@ -5,47 +5,14 @@ import Funds from './Funds'
 import HederaAddressInput from './HederaAddressInput'
 import Chatbot from './Chatbot'
 import CredentialVerifyLog from './CredentialVerifyLog'
-import { useEffect } from 'react'
 
 const Admin = () => {
   const { isToggled } = useAppContext()
-  // const [evidence, setEvidence] = useState(Array(toggleLabels.length).fill(null))
-  // const [showComment, setShowComment] = useState(Array(toggleLabels.length).fill(false))
-  // const [comments, setComments] = useState(Array(toggleLabels.length).fill(''))
-
   const navigate = useNavigate()
-
-  // const handleToggle = (index: number) => {
-  //   setToggles(prev =>
-  //     prev.map((val, i) => (i === index ? !val : val))
-  //   )
-  // }
-
-  // const handleEvidenceChange = (index: number, file: File | null) => {
-  //   setEvidence(prev =>
-  //     prev.map((val, i) => (i === index ? file : val))
-  //   )
-  // }
-
-  // const handleShowComment = (index: number) => {
-  //   setShowComment(prev =>
-  //     prev.map((val, i) => (i === index ? !val : val))
-  //   )
-  // }
-
-  // const handleCommentChange = (index: number, value: string) => {
-  //   setComments(prev =>
-  //     prev.map((val, i) => (i === index ? value : val))
-  //   )
-  // }
 
   const allToggled = isToggled.every(Boolean)
   const toggledCount = isToggled.filter(Boolean).length
-
-  useEffect(() => {
-    console.log(isToggled)
-  }, [])
-
+  
   return (
     <>
       <div className="grid grid-cols-12 gap-6 p-8">

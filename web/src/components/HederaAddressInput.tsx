@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useAppContext } from '../AppProvider'
 
 type HederaAddressInputProps = {
   onValidChange?: (value: string | null) => void
@@ -7,7 +8,7 @@ type HederaAddressInputProps = {
 export default function HederaAddressInput({
   onValidChange,
 }: HederaAddressInputProps) {
-  const [value, setValue] = useState("")
+  const { accountId, setAccountId } = useAppContext()
   const [touched, setTouched] = useState(false)
 
   // Suggested addresses
@@ -52,32 +53,31 @@ export default function HederaAddressInput({
     };
   };
 
-  const { valid, reason } = validate(value);
+  const { valid, reason } = validate(accountId);
 
   useEffect(() => {
     if (onValidChange) {
-      onValidChange(valid ? value.trim() : null);
+      onValidChange(valid ? accountId.trim() : null)
     }
-  }, [valid, value, onValidChange]);
+  }, [valid, accountId, onValidChange])
 
-  const inputBase =
-    "mt-2 w-full border rounded p-2 text-sm focus:outline-none focus:ring-2";
+  const inputBase = "mt-2 w-full border rounded p-2 text-sm focus:outline-none focus:ring-2"
 
   const inputClass = valid
     ? `${inputBase} ring-green-400 border-green-600`
     : touched && !valid
     ? `${inputBase} ring-red-400 border-red-600`
-    : `${inputBase} ring-blue-400 border-gray-300`;
+    : `${inputBase} ring-blue-400 border-gray-300`
 
   return (
     <div className="max-w-md">
       <input
         type="text"
-        value={value}
+        value={accountId}
         placeholder="0.0.54321"
         aria-label="Hedera account or EVM address"
         aria-invalid={touched && !valid}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={(e) => setAccountId(e.target.value)}
         onBlur={() => setTouched(true)}
         className={inputClass}
         list="suggested-addresses" // Link to the datalist

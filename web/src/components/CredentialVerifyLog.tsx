@@ -3,10 +3,8 @@ import { useAppContext } from '../AppProvider'
 import { identitiesSought } from '../constants'
 
 const CredentialVerifyLog = ({ idx }: { idx: number }) => {
-  const [aid, setAid] = useState('')
-  const [file, setFile] = useState<File | null>(null)
-  const [comment, setComment] = useState('')
   const { isToggled, setIsToggled } = useAppContext()
+  const { aids, setAids, files, setFiles, comments, setComments } = useAppContext()
 
   const [isDeclarationChecked, setIsDeclarationChecked] = useState<boolean[]>(Array(identitiesSought.length).fill(false))
   const [isAIDvalid, setIsAIDvalid] = useState<boolean[]>(Array(identitiesSought.length).fill(false))
@@ -45,30 +43,23 @@ const CredentialVerifyLog = ({ idx }: { idx: number }) => {
             type="text"
             className={`w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400 ${isAIDvalid[idx] ? '' : 'border-red-600 ring-red-400'}`}
             placeholder="Enter AID"
-            value={aid}
+            value={aids[idx]}
             onChange={(e) => {
-              setAid(e.target.value)
-
+              setAids((prev) => prev.map((aid, i) => (i === idx ? e.target.value : aid)))
               if (regexAID.test(e.target.value.trim())) {
-                const newValid = [...isAIDvalid]
-                newValid[idx] = true
-                setIsAIDvalid(newValid)
+                setIsAIDvalid((prev) => prev.map((valid, i) => (i === idx ? true : valid)))
               } else {
-                setIsAIDvalid((prev) => {
-                  const newValid = [...prev]
-                  newValid[idx] = false
-                  return newValid
-                })
+                setIsAIDvalid((prev) => prev.map((valid, i) => (i === idx ? false : valid)))
               }
             }}
             disabled={isToggled[idx]}
           />
 
-          <a href={`https://example.com/verify-aid?aid=${encodeURIComponent(aid)}`}
+          <a href={`https://example.com/verify-aid?aid=${encodeURIComponent(aids[idx])}`}
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex float-right text-xs ${aid.length >= 10 ? '' : 'opacity-50 pointer-events-none'}`}
-          >{`https://example.com/verify-aid?aid=${encodeURIComponent(aid)}`}</a>
+            className={`flex float-right text-xs ${aids[idx].length >= 10 ? '' : 'opacity-50 pointer-events-none'}`}
+          >{`https://example.com/verify-aid?aid=${encodeURIComponent(aids[idx])}`}</a>
         </div>
         
 
@@ -90,12 +81,12 @@ const CredentialVerifyLog = ({ idx }: { idx: number }) => {
               id="file-upload"
               type="file"
               className="hidden"
-              onChange={(e) => setFile(e.target.files?.[0] || null)}
+              onChange={(e) => setFiles((prev) => prev.map((file, i) => (i === idx ? e.target.files?.[0] || null : file)))}
               disabled={isToggled[idx]}
             />
-            {file && (
+            {files[idx] && (
               <p className="text-sm text-gray-600">
-                {file.name}
+                {files[idx]?.name}
               </p>
             )}
           </div>
@@ -110,8 +101,8 @@ const CredentialVerifyLog = ({ idx }: { idx: number }) => {
             className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
             rows={3}
             placeholder="Write a comment..."
-            value={comment}
-            onChange={(e) => setComment(e.target.value)}
+            value={comments[idx]}
+            onChange={(e) => setComments((prev) => prev.map((comment, i) => (i === idx ? e.target.value : comment)))}
             disabled={isToggled[idx]}
           />
         </div>
@@ -137,17 +128,16 @@ const CredentialVerifyLog = ({ idx }: { idx: number }) => {
               isToggled[idx] ? 'bg-green-500' : 'bg-gray-300'
             }`}
             onClick={() => {
-              if (!isDeclarationChecked[idx]) {
-                alert('Must check the box above declaring you are satisfied with the credential to commit the verification')
-                return
-              }
               if (!isAIDvalid[idx]) {
                 alert('Must provide a valid AID to commit the verification')
                 return
               }
-              const newToggled = [...isToggled]
-              newToggled[idx] = !isToggled[idx]
-              setIsToggled(newToggled)
+              if (!isDeclarationChecked[idx]) {
+                alert('Must check the box above declaring you are satisfied with the credential to commit the verification')
+                return
+              }
+              // OK
+              setIsToggled((prev) => prev.map((toggled, i) => (i === idx ? !toggled : toggled)))
             }}
           >
             <span
