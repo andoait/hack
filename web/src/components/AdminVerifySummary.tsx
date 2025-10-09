@@ -54,7 +54,7 @@ const AdminVerifySummary = () => {
               }),
             })
             const data = await result.json()
-            console.log('Whitelist response:', data)
+            console.log('Whitelist response:', data) 
             alert(`Whitelist response: ${JSON.stringify(data)}`)
             setThinger(false)
           }}
