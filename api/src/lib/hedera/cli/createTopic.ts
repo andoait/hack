@@ -1,6 +1,6 @@
 import { TopicCreateTransaction } from '@hashgraph/sdk'
-import { operatorAccountId, network, operatorKeyType } from '@shared/constants'
-import { initHederaClient } from './utils'
+import { operatorAccountId, network, operatorKeyType } from '../../../../../shared/constants.ts'
+import { initHederaClient } from '../utils.ts'
 
 const [client, operatorKey] = initHederaClient(network, operatorAccountId, operatorKeyType)
 

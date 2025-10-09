@@ -4,12 +4,12 @@ import {
   TokenId
 } from '@hashgraph/sdk'
 
-import { network, operatorAccountId, operatorKeyType } from '@shared/constants'
-import { initHederaClient } from './utils'
+import { network, operatorAccountId, operatorKeyType } from '../../../../shared/constants.ts'
+import { initHederaClient } from './utils.ts'
 
 const [ client, operatorKey ] = initHederaClient(network, operatorAccountId, operatorKeyType)
 
-const revoke = async (tokenId: TokenId | string, revokeAccountId: AccountId | string) => {
+const tokenRevokeKycAccountId = async (tokenId: TokenId | string, revokeAccountId: AccountId | string) => {
   const revokeKycTx = await new TokenRevokeKycTransaction()
     .setAccountId(revokeAccountId)
     .setTokenId(tokenId)
@@ -24,12 +24,4 @@ const revoke = async (tokenId: TokenId | string, revokeAccountId: AccountId | st
   console.log('Revoke KYC status:', receipt.status.toString())
 }
 
-const TOKEN_ID = '0.0.6975423'
-const ACCOUNT_ID = '0.0.6941561'
-
-;(async () => {
-  await revoke(TOKEN_ID, ACCOUNT_ID)
-  process.exit(0)
-})()
-
-export default revoke
+export default tokenRevokeKycAccountId

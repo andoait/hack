@@ -2,8 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@shared/*": ["shared/*"],
-      "@hedera/*": ["hedera/*"]
+      "@shared/*": ["shared/*"]
     },
     "target": "ES2020",
     "module": "ESNext",

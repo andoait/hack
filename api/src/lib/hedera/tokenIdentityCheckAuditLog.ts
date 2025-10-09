@@ -2,8 +2,8 @@ import {
     TopicMessageSubmitTransaction,
 } from '@hashgraph/sdk'
 
-import { network, operatorAccountId, operatorKeyType, auditTopicId } from '@shared/constants'
-import { initHederaClient } from './utils'
+import { network, operatorAccountId, operatorKeyType, auditTopicId } from '../../../../shared/constants.ts'
+import { initHederaClient } from './utils.ts'
 import crypto from 'crypto'
 
 const [ client, operatorKey ] = initHederaClient(network, operatorAccountId, operatorKeyType)
@@ -32,9 +32,5 @@ const identityCheckAuditLog = async (
     }
 }
 
-;(async () => {
-    await identityCheckAuditLog('test-credential-id', ['aid1', 'aid2', 'aid3', 'aid4'])
-    process.exit(0)
-})()
-
 export default identityCheckAuditLog
+

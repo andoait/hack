@@ -1,14 +1,23 @@
 {
+  // "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "paths": {
-      "@shared/*": ["../shared/*"]
-    },
-    "module": "ESNext",
-    "target": "ES2020",
-    "moduleResolution": "node",
-    "strict": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true
-  }
+    "target": "ES2020",                // modern JS
+    "module": "NodeNext",              // must match NodeNext resolution
+    "moduleResolution": "NodeNext",    // Node 16+ ESM style
+    "esModuleInterop": true,           // default imports from CommonJS
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,                    // strict type checks
+    "skipLibCheck": true,              // skip checking node_modules
+    "outDir": "dist",                  // compiled JS output
+    "resolveJsonModule": true,         // import JSON
+    "sourceMap": true,                  // useful for debugging
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    // "baseUrl": ".",
+    // "paths": {
+    //   "@shared/*": ["shared/*"]
+    // }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }

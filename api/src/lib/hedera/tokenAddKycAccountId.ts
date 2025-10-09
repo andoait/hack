@@ -4,8 +4,8 @@ import {
     TokenId,
 } from '@hashgraph/sdk'
 
-import { network, operatorAccountId, operatorKeyType } from '@shared/constants'
-import { initHederaClient } from './utils'
+import { network, operatorAccountId, operatorKeyType } from '../../../../shared/constants.ts'
+import { initHederaClient } from './utils.ts'
 
 const [ client, operatorKey ] = initHederaClient(network, operatorAccountId, operatorKeyType)
 
@@ -28,17 +28,6 @@ const tokenAddKycAccountId = async (tokenId: TokenId | string, accountId: Accoun
     }
 }
 
-// Read command line arguments
-const args = process.argv.slice(2)
-const TOKEN_ID = args[0] || '0.0.6975422'  // Default value if not provided
-const ACCOUNT_ID = args[1] || '0.0.6941568'  // Default value if not provided
-
-
-;(async () => {
-  await tokenAddKycAccountId(TOKEN_ID, ACCOUNT_ID)
-  process.exit(0)
-})()
-
-// export {
-//     tokenAddKycAccountId
-// }
+export {
+    tokenAddKycAccountId
+}

@@ -6,7 +6,9 @@ An API to handle backend calls to the Hedera network
 
 `npm i`
 
-`node --loader ts-node/esm index.ts`
+`npm run dev`
+
+Service is now listening on port 8080
 
 
 ### curl commands:
@@ -22,8 +24,6 @@ curl -X POST http://localhost:8080/whitelist \
 
 
 ### Notes
-
-- tsconfig.json uses "shared"
 
 
 

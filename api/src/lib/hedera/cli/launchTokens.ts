@@ -1,6 +1,6 @@
 import { TokenCreateTransaction, TokenType, TokenSupplyType } from '@hashgraph/sdk'
-import { funds, operatorAccountId, network, operatorKeyType } from './old/constants'
-import { initHederaClient } from './utils'
+import { funds, operatorAccountId, network, operatorKeyType } from '../../../../../shared/constants.ts'
+import { initHederaClient } from '../utils.ts'
 
 const [ client, operatorKey ] = initHederaClient(network, operatorAccountId, operatorKeyType)
 
