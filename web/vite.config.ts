@@ -14,7 +14,7 @@ export default defineConfig({
       '@shared': path.resolve(__dirname, '../shared'),
     },
   },
-  base: '/', // Your repo name
+  base: '/hack', // also change main.tsx
   build: {
     outDir: 'dist',
     // assetsDir: 'assets',
@@ -25,5 +25,16 @@ export default defineConfig({
     //     // 404: './public/404.html'
     //   }
     // }
-  }
+  },
+
+  server: {
+    port: 3000, // your Vite dev server port
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080', // your backend server
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''), // optional
+      },
+    },
+  },
 })

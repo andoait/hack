@@ -8,9 +8,10 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,                    // strict type checks
     "skipLibCheck": true,              // skip checking node_modules
+    "rootDir": "../",
     "outDir": "dist",                  // compiled JS output
     "resolveJsonModule": true,         // import JSON
-    "sourceMap": true,                  // useful for debugging
+    "sourceMap": true,                 // useful for debugging
     "allowImportingTsExtensions": true,
     "noEmit": true,
     // "baseUrl": ".",
