@@ -1,19 +1,9 @@
 import { useNavigate } from 'react-router'
 import { funds } from '@shared/constants'
-import { useEffect } from 'react'
 
 const Home = () => {
   const navigate = useNavigate()
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const result = await fetch('/api/')
-  //     const jsonObj = await result.json()
-  //     console.log('API result:', jsonObj)
-  //   }
-  //   fetchData()
-  // }, [])
-
+  
   return (
     <>
       <main className="max-w-4xl mx-auto px-6 py-12">
