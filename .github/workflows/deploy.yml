@@ -1,0 +1,61 @@
+name: Build and Deploy Web
+
+permissions:
+  id-token: write
+  contents: read
+  pages: write
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
+        cache-dependency-path: './web/package-lock.json'
+        
+    - name: Install dependencies
+      working-directory: ./web
+      run: npm ci
+      
+    - name: Build
+      working-directory: ./web
+      run: npm run build
+
+    - name: List build output (debug)
+      working-directory: ./web
+      run: |
+        echo "Contents of dist folder:"
+        ls -la dist/
+        echo "Contents of index.html:"
+        cat dist/index.html
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v3
+      
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: './web/dist' 
+        
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v4
+      
+    # - name: Deploy to GitHub Pages
+    #   uses: peaceiris/actions-gh-pages@v3
+    #   if: github.ref == 'refs/heads/main'
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     publish_dir: ./web/dist  # or ./web/build depending on your build output
