@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router'
-import { funds } from '../constants'
+import { funds } from '@shared/constants'
 
 const Home = () => {
   const navigate = useNavigate()

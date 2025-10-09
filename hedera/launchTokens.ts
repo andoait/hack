@@ -1,5 +1,5 @@
 import { TokenCreateTransaction, TokenType, TokenSupplyType } from '@hashgraph/sdk'
-import { funds, operatorAccountId, network, operatorKeyType } from './constants'
+import { funds, operatorAccountId, network, operatorKeyType } from './old/constants'
 import { initHederaClient } from './utils'
 
 const [ client, operatorKey ] = initHederaClient(network, operatorAccountId, operatorKeyType)
@@ -33,4 +33,5 @@ const launchTokens = async () => {
   await launchTokens().catch(console.error)
 
   console.log('done.')
+  process.exit(0)
 })()

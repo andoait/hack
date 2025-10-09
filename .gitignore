@@ -1,5 +1,6 @@
 .env
 old
+dist
 
 node_modules/
 .node_modules/

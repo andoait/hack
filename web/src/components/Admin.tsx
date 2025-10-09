@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router'
-import { identitiesSought } from '../constants'
+import { identitiesSought } from '@shared/constants'
 import { useAppContext } from '../AppProvider'
 import Funds from './Funds'
 import HederaAddressInput from './HederaAddressInput'

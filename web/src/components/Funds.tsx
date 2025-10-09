@@ -1,5 +1,5 @@
 import { useAppContext } from '../AppProvider'
-import { funds } from '../constants'
+import { funds } from '@shared/constants'
 
 const Funds = () => {
   // const [selected, setSelected] = useState(funds[0].symbol)

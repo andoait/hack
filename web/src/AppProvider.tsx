@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react'
-import { identitiesSought } from './constants'
+import { identitiesSought } from '@shared/constants'
 
 // 1. Define a type for your context
 interface AppContextType {

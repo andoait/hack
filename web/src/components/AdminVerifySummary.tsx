@@ -1,4 +1,4 @@
-import { funds, identitiesSought } from '../constants'
+import { funds, identitiesSought } from '@shared/constants'
 import { useAppContext } from '../AppProvider'
 import { useState } from 'react'
 

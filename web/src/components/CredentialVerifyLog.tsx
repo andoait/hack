@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useAppContext } from '../AppProvider'
-import { identitiesSought } from '../constants'
+import { identitiesSought } from '@shared/constants'
 
 const CredentialVerifyLog = ({ idx }: { idx: number }) => {
   const { isToggled, setIsToggled } = useAppContext()

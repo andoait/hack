@@ -1,5 +1,5 @@
 import { TopicCreateTransaction } from '@hashgraph/sdk'
-import { operatorAccountId, network, operatorKeyType } from './constants'
+import { operatorAccountId, network, operatorKeyType } from '@shared/constants'
 import { initHederaClient } from './utils'
 
 const [client, operatorKey] = initHederaClient(network, operatorAccountId, operatorKeyType)
@@ -26,6 +26,7 @@ const createTopic = async () => {
 
 ;(async () => {
   await createTopic()
+  process.exit(0)
 })()
 
 export default createTopic

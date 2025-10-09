@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -8,7 +9,12 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  base: '/hack/', // Your repo name
+  resolve: {
+    alias: {
+      '@shared': path.resolve(__dirname, '../shared'),
+    },
+  },
+  base: '/', // Your repo name
   build: {
     outDir: 'dist',
     // assetsDir: 'assets',
