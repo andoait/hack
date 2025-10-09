@@ -24,4 +24,4 @@ const tokenRevokeKycAccountId = async (tokenId: TokenId | string, revokeAccountI
   console.log('Revoke KYC status:', receipt.status.toString())
 }
 
-export default tokenRevokeKycAccountId
+export { tokenRevokeKycAccountId }

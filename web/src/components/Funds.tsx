@@ -1,25 +1,16 @@
 import { useAppContext } from '../AppProvider'
 import { funds } from '@shared/constants'
+import TokenSelector from './TokenSelector'
 
 const Funds = () => {
   // const [selected, setSelected] = useState(funds[0].symbol)
   // const selectedFund = funds.find(fund => fund.symbol === selected)
 
-  const { selectedFundIdx, setSelectedFundIdx } = useAppContext()
+  const { selectedFundIdx } = useAppContext()
 
   return (
     <>
-      <select
-        className='w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400'
-        value={selectedFundIdx}
-        onChange={e => setSelectedFundIdx(Number(e.target.value))}
-      >
-        {funds.map((fund, idx) => (
-          <option key={fund.symbol} value={idx}>
-            {fund.name}
-          </option>
-        ))}
-      </select>
+      <TokenSelector />
       <div className='mt-0 text-sm text-gray-600'>
         Symbol: <span className='font-mono text-blue-700'>{funds[selectedFundIdx]?.symbol}</span>
         <br />

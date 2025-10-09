@@ -5,14 +5,14 @@ import { useEffect } from 'react'
 const Home = () => {
   const navigate = useNavigate()
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await fetch('/api/')
-      const jsonObj = await result.json()
-      console.log('API result:', jsonObj)
-    }
-    fetchData()
-  }, [])
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const result = await fetch('/api/')
+  //     const jsonObj = await result.json()
+  //     console.log('API result:', jsonObj)
+  //   }
+  //   fetchData()
+  // }, [])
 
   return (
     <>
@@ -44,7 +44,7 @@ const Home = () => {
             <p className="text-blue-700 mb-4">
               Ready to begin? Explore the features and start using the application.
             </p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition-colors cursor-pointer"
+            <button className="btn-primary"
               onClick={() => { navigate('/menu')}}>
               Start Now
             </button>
@@ -75,17 +75,29 @@ const Home = () => {
           </div>
 
           {/* Why KERI Section */}
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">
-            Why use KERI for identity?
-          </h3>
+          <h3>Why use KERI for identity?</h3>
           <div className="border-blue-600 rounded-lg shadow-md border p-8 mb-8">
             <p className="text-gray-700 mb-4">
-              Lorum ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              KERI (Key Event Receipt Infrastructure) is a cryptographic protocol for managing identifiers and keys in a decentralized way.
+            </p>
+
+            <p className="text-gray-700 mb-3">Core idea: instead of relying on a central registry, the control of an identifier is expressed as a sequence of cryptographically verifiable "events".</p>
+
+            <p className="text-gray-700 mb-3">Key features:</p>
+
+            <ul className="list-disc list-inside text-gray-700 mb-4 space-y-1">
+              <li>Decentralized key management — rotation, revocation, and recovery are all verifiable</li>
+              <li>Event-sourced identifiers — each key change is recorded as a verifiable event</li>
+              <li>No need for a blockchain or central ledger — the chain of events itself provides cryptographic proof of control</li>
+            </ul>
+
+            <p className="text-gray-600 mt-3">
+              KERI provides a robust foundation for identity management in tokenized securities, ensuring that identity verification and key management are both secure and compliant with regulatory requirements.
             </p>
           </div>
 
           {/* Why Hedera Section */}
-           <h3 className="text-xl font-semibold text-gray-900 mb-4">
+           <h3>
             Why native Hedera tokens?
           </h3>
           <div className="border-blue-600 rounded-lg shadow-md border p-8 mb-8">

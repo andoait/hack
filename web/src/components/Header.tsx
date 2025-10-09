@@ -42,7 +42,7 @@ const Header = () => {
         { !isLoggedIn &&
         <button
           type='button'
-          className='px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 hover:scale-102 cursor-pointer transition-transform duration-100 focus:outline-none focus:ring-2 focus:ring-blue-400'
+          className='btn-primary'
           onClick={() => { navigate('/login') }}
         >
           Login

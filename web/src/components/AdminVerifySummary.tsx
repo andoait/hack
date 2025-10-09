@@ -41,7 +41,7 @@ const AdminVerifySummary = () => {
       <div className="mt-8">
         <button
           type="button"
-          className={`py-3 px-6 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors cursor-pointer ${thinger ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`py-3 px-6 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed`}
           disabled={thinger}
           onClick={async () => {
             setThinger(true)
