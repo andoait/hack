@@ -21,7 +21,7 @@ const tokenRevokeKycAccountId = async (tokenId: TokenId | string, revokeAccountI
 
   // Get receipt to confirm
   const receipt = await txResponse.getReceipt(client)
-  console.log('Revoke KYC status:', receipt.status.toString())
+  console.log(`Revoke KYC status (token: ${tokenId}, account: ${revokeAccountId}) - `, receipt.status.toString())
 }
 
 export { tokenRevokeKycAccountId }

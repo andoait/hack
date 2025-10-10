@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useAppContext } from '../AppProvider'
+import { suggestedAddresses } from '@shared/constants'
 
 type HederaAddressInputProps = {
   onValidChange?: (value: string | null) => void
@@ -10,9 +11,6 @@ export default function HederaAddressInput({
 }: HederaAddressInputProps) {
   const { accountId, setAccountId } = useAppContext()
   const [touched, setTouched] = useState(false)
-
-  // Suggested addresses
-  const suggestedAddresses = ['0.0.6941561', '0.0.6941568', '0.0.6941611']
 
   // validators
   const isAccountId = (s: string): boolean => {

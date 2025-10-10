@@ -6,6 +6,7 @@ import Login from './Login'
 import AdminVerifySummary from './AdminVerifySummary'
 import Menu from './Menu'
 import Revoke from './Revoke'
+import Verifier from './Verifier'
 
 const Main = () => {
   return (
@@ -18,6 +19,7 @@ const Main = () => {
         <Route path='/admin' element={<Admin />} />
         <Route path='/admin/verifySummary' element={<AdminVerifySummary />} />
         <Route path='/revoke' element={<Revoke />} />
+        <Route path='/verifier' element={<Verifier />} />
       </Routes>
     </>
   )

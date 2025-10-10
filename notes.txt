@@ -20,9 +20,9 @@ LSEG Risk Intelligence
 
 
 Holders (have credential registries):
-ClientA #388833
-ClientB
-ClientX
+ClientA (Antoine Basil - 1/1/2001)
+ClientB (Barbara Cyder - 2/2/2002)
+ClientX (Xavier Dorsal - 3/3/2003)
 
 
 Verifier (no credential registries):
@@ -32,8 +32,9 @@ STEX
 
 
 
-
+--------
 Schemas
+--------
 {
   "alias": "National ID",
   "title": "National ID",
@@ -43,10 +44,7 @@ Schemas
     "idCardNumber": {
       "type": "string"
     },
-    "firstName": {
-      "type": "string"
-    },
-    "lastName": {
+    "name": {
       "type": "string"
     },
     "dob": {
@@ -79,8 +77,8 @@ Schemas
 
 
 {
-  "alias": "AML individual",
-  "title": "AML individual",
+  "alias": "AML",
+  "title": "AML",
   "description": "Anti money laundering credential for an individual",
   "schemaId": "EMXNHLMwDTLhuYQH759n9N1jh9Se4PO0GvKS4aNsDsYr",
   "properties": {
@@ -92,9 +90,9 @@ Schemas
 
 
 {
-  "alias": "PEP individual",
-  "title": "PEP individual",
-  "description": "Individual is not a politically exposed person",
+  "alias": "PEP",
+  "title": "PEP",
+  "description": "Individual is not a politically exposed person (PEP)",
   "schemaId": "EDQaHnivlwZaxl-vIXnw-821lQYrPi9812iHZumi98Ce",
   "properties": {
     "isPEP": {
@@ -102,5 +100,60 @@ Schemas
     }
   }
 }
+
+
+
+-----
+Credentials
+-----
+national-id-clienta
+  589358351
+  Antoine Basil
+  1/1/2001
+national-id-clientb
+  039482983
+  Barbara Cyder
+  2/2/2002
+national-id-clientx
+  842948294
+  Xavier Dorsal
+  3/3/2003
+
+
+
+lei-clienta
+   48394829482
+   Borsa Systems Ltd
+   GB4829482
+   GB
+
+lei-clientb
+   10482948294
+   Zorca Finance Ltd
+   GB1283924
+   GB
+
+lei-clientx
+   58395839928
+   Argonaut Ltd
+   GB8398293
+   GB
+
+
+aml-clienta
+   true
+aml-clientb
+   true
+aml-clientx
+   false
+
+
+
+pep-clienta
+   true
+pep-clientb
+   true
+pep-clientx
+   false
 
 

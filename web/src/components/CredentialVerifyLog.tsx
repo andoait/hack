@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useAppContext } from '../AppProvider'
-import { identitiesSought } from '@shared/constants'
+import { identitiesSought, suggestedAddresses, suggestedSAIDs } from '@shared/constants'
 
 const CredentialVerifyLog = ({ idx }: { idx: number }) => {
-  const { isToggled, setIsToggled } = useAppContext()
+  const { isToggled, setIsToggled, accountId } = useAppContext()
   const { aids, setAids, files, setFiles, comments, setComments } = useAppContext()
 
   const [isDeclarationChecked, setIsDeclarationChecked] = useState<boolean[]>(Array(identitiesSought.length).fill(false))
@@ -12,6 +12,19 @@ const CredentialVerifyLog = ({ idx }: { idx: number }) => {
   const item = identitiesSought[idx]
 
   const regexAID = /^[A-Za-z0-9-_=]{10,}$/
+
+  const accountIdx = suggestedAddresses.indexOf(accountId) === -1 ? 0 : suggestedAddresses.indexOf(accountId)
+
+  // Auto-fill with suggested value if current value is empty
+  useEffect(() => {
+    if (!aids[idx] && suggestedSAIDs[accountIdx] && suggestedSAIDs[accountIdx][idx]) {
+      const suggestedValue = suggestedSAIDs[accountIdx][idx].said
+      setAids((prev) => prev.map((aid, i) => (i === idx ? suggestedValue : aid)))
+      if (regexAID.test(suggestedValue.trim())) {
+        setIsAIDvalid((prev) => prev.map((valid, i) => (i === idx ? true : valid)))
+      }
+    }
+  }, [idx, accountIdx])
 
   return (
     <div className={`flex-1 ${isToggled[idx] ? 'opacity-50' : ''}`}>
@@ -27,22 +40,22 @@ const CredentialVerifyLog = ({ idx }: { idx: number }) => {
 
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700 mb-1">
-            Issuer AID
+            Issuer SAID
           </label>
           <span className='text-sm'>
-            <code>{item.issuerAID}</code>
+            <code>{suggestedSAIDs[accountIdx][idx].issuerSAID}</code>
           </span> - <b>{item.name}</b>
         </div>
 
-        {/* AID Input */}
+        {/* SAID Input */}
         <div className="mb-4">
           <label className="block text-sm font-medium text-gray-700 mb-1">
-            Credential AID
+            Credential SAID
           </label>
           <input
             type="text"
             className={`w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400 ${isAIDvalid[idx] ? '' : 'border-red-600 ring-red-400'}`}
-            placeholder="Enter AID"
+            placeholder="Enter SAID"
             value={aids[idx]}
             onChange={(e) => {
               setAids((prev) => prev.map((aid, i) => (i === idx ? e.target.value : aid)))

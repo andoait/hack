@@ -37,7 +37,7 @@ const Chatbot = () => {
         <div className="mt-4 border rounded-lg bg-white w-120 max-w-120">
           <div className="p-3 border-b bg-gray-50 rounded-t-lg flex justify-between items-center">
             <div>
-              <h4 className="font-semibold text-sm">Credential Assistant</h4>
+              <h4 className="font-semibold text-sm">p2p Credential Assistant (hypothetical)</h4>
               <p className="text-xs text-gray-600">Get help gathering the required credential AIDs</p>
             </div>
             {/* X button in top right */}
