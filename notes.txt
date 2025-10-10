@@ -157,3 +157,733 @@ pep-clientx
    false
 
 
+
+
+--------------
+
+
+---
+clientA credentials
+---
+lseg-aml-clienta
+{
+  "v": "KERI10JSON0005a9_",
+  "t": "exn",
+  "d": "EBWbqr90kToO3pXDXXM4NfuYCoCeVRnYFtBZ8F-Vzv5u",
+  "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+  "rp": "DPGIMIILilRi0rezWNpCTQhiPlBkFxNXaQDTpXbyStJN",
+  "p": "",
+  "dt": "2025-10-10T09:46:03.733000+00:00",
+  "r": "/ipex/grant",
+  "q": {},
+  "a": {
+    "m": "Credential: EOY7a8Dwt4Kh...",
+    "i": "DPGIMIILilRi0rezWNpCTQhiPlBkFxNXaQDTpXbyStJN"
+  },
+  "e": {
+    "d": "EFOGq76nJjkSj_nHwFGUqF_je7F9q-Bz02Ch-QkXrH6j",
+    "acdc": {
+      "v": "ACDC10JSON",
+      "d": "EOY7a8Dwt4KhNcq3-mdxkxdG7TkfZjVOWSu49vUHdr8k",
+      "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+      "ri": "ENNGArgQEGlMu2dJGadv1tg9fS77lHMPDZKWkxYt1Xw8",
+      "s": "EMXNHLMwDTLhuYQH759n9N1jh9Se4PO0GvKS4aNsDsYr",
+      "a": {
+        "d": "",
+        "i": "DPGIMIILilRi0rezWNpCTQhiPlBkFxNXaQDTpXbyStJN",
+        "isOK": true
+      }
+    },
+    "iss": {
+      "v": "KERI10JSON0000ed_",
+      "t": "iss",
+      "d": "EAfnECPC81J3jP6AacUpyuGQho_J1kR8VCNtzvx4_dMR",
+      "i": "EOY7a8Dwt4KhNcq3-mdxkxdG7TkfZjVOWSu49vUHdr8k",
+      "s": "0",
+      "dt": "2025-10-09T20:05:55.115000+00:00",
+      "ri": "ENNGArgQEGlMu2dJGadv1tg9fS77lHMPDZKWkxYt1Xw8",
+      "acdcSaid": "EOY7a8Dwt4KhNcq3-mdxkxdG7TkfZjVOWSu49vUHdr8k",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T20:05:55.118Z",
+      "sigs": [
+        "0BCNld5DiBHzqY7hprIqiPRDCBwvYd8XOU1ln2V7z5LVZ4Zwj6-7KI8AUV1vJDpv8IjVZlyL5ibcIkVm0BW_V-kM"
+      ]
+    },
+    "anc": {
+      "v": "KERI10JSON000132_",
+      "t": "ixn",
+      "d": "EHYDOqqZ9K7DJtLVZ1zwt3-gbZGOAzN9-E8PhgshIk3Y",
+      "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+      "s": "1",
+      "p": "ENCvaPVoeBkXciz2iTlp-XoFKZ25nBAOPm0uGaTIDLDC",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T18:46:23.452Z"
+    }
+  }
+}
+
+lseg-pep-clienta
+{
+  "v": "KERI10JSON0005ab_",
+  "t": "exn",
+  "d": "EGaHsbMlMEafQsvRbIsWy3Q6DsYZoTR-E9A5QLzUAkzk",
+  "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+  "rp": "DPGIMIILilRi0rezWNpCTQhiPlBkFxNXaQDTpXbyStJN",
+  "p": "",
+  "dt": "2025-10-10T09:46:17.141000+00:00",
+  "r": "/ipex/grant",
+  "q": {},
+  "a": {
+    "m": "Credential: EI5KENSYHz6x...",
+    "i": "DPGIMIILilRi0rezWNpCTQhiPlBkFxNXaQDTpXbyStJN"
+  },
+  "e": {
+    "d": "ED_q1Gq35jblKn7dXmkV9-GzT6cG6f5WkFn3WwlV4hZO",
+    "acdc": {
+      "v": "ACDC10JSON",
+      "d": "EI5KENSYHz6x5ftUd0rOjC0_ETxptZUtMjsPjrlf8ae4",
+      "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+      "ri": "ENNGArgQEGlMu2dJGadv1tg9fS77lHMPDZKWkxYt1Xw8",
+      "s": "EFlVixHXRedd8tyyG2gnzacAklg0orm523UAkCt4d2iN",
+      "a": {
+        "d": "",
+        "i": "DPGIMIILilRi0rezWNpCTQhiPlBkFxNXaQDTpXbyStJN",
+        "isPEP": false
+      }
+    },
+    "iss": {
+      "v": "KERI10JSON0000ed_",
+      "t": "iss",
+      "d": "EK22V-WiNJKh_GeB7uleD5TLrCqyCDMvcFVu4RIZJ3QJ",
+      "i": "EI5KENSYHz6x5ftUd0rOjC0_ETxptZUtMjsPjrlf8ae4",
+      "s": "0",
+      "dt": "2025-10-09T20:08:12.327000+00:00",
+      "ri": "ENNGArgQEGlMu2dJGadv1tg9fS77lHMPDZKWkxYt1Xw8",
+      "acdcSaid": "EI5KENSYHz6x5ftUd0rOjC0_ETxptZUtMjsPjrlf8ae4",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T20:08:12.329Z",
+      "sigs": [
+        "0BAAIPw7ti0Xhx7I-onL2fgczAbjYAKv1jWte3EX_R1mSnsnAnWzU9ap-aJMOCv0asURWWL6PXuZqHbKypln3jEJ"
+      ]
+    },
+    "anc": {
+      "v": "KERI10JSON000132_",
+      "t": "ixn",
+      "d": "EHYDOqqZ9K7DJtLVZ1zwt3-gbZGOAzN9-E8PhgshIk3Y",
+      "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+      "s": "1",
+      "p": "ENCvaPVoeBkXciz2iTlp-XoFKZ25nBAOPm0uGaTIDLDC",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T18:46:23.452Z"
+    }
+  }
+}
+
+
+gleif-lei-clienta
+{
+  "v": "KERI10JSON000619_",
+  "t": "exn",
+  "d": "EM7Gp0f1beEk1olK-kYka9Nvb7Wgk2CZg-nMS-F5L4md",
+  "i": "DC62W2iX8EUXAo3W0_V-cHRC24TSZQLTomfy8FmZXt_-",
+  "rp": "DPGIMIILilRi0rezWNpCTQhiPlBkFxNXaQDTpXbyStJN",
+  "p": "",
+  "dt": "2025-10-10T09:46:34.920000+00:00",
+  "r": "/ipex/grant",
+  "q": {},
+  "a": {
+    "m": "Credential: EBuheH0-3Yd_...",
+    "i": "DPGIMIILilRi0rezWNpCTQhiPlBkFxNXaQDTpXbyStJN"
+  },
+  "e": {
+    "d": "EF4qzX-OBnOmZWVclOddR2uqEj8OgjeFRNES9LZCzecz",
+    "acdc": {
+      "v": "ACDC10JSON",
+      "d": "EBuheH0-3Yd_inDtw7HCdaIqlbPPru14kLl4p8y-jrvU",
+      "i": "DC62W2iX8EUXAo3W0_V-cHRC24TSZQLTomfy8FmZXt_-",
+      "ri": "EPaaQgFetKuCg_wYuwV5mGoZTkTphFg87kKEQ1HF5tON",
+      "s": "EIKWCQM_I6K0birfObtDmwDZA5XN4AHuI5A8KbROJXSM",
+      "a": {
+        "d": "",
+        "i": "DPGIMIILilRi0rezWNpCTQhiPlBkFxNXaQDTpXbyStJN",
+        "lei": "48394829482",
+        "legalEntityName": "Borsa Systems Ltd",
+        "legalEntityRegistrationNumber": "GB4829482",
+        "isoCountryCode": "GB"
+      }
+    },
+    "iss": {
+      "v": "KERI10JSON0000ed_",
+      "t": "iss",
+      "d": "EOY8xTARXryszzKE_DOFjTXe1egGI09mxL56-k-3NzGI",
+      "i": "EBuheH0-3Yd_inDtw7HCdaIqlbPPru14kLl4p8y-jrvU",
+      "s": "0",
+      "dt": "2025-10-09T19:31:26.969000+00:00",
+      "ri": "EPaaQgFetKuCg_wYuwV5mGoZTkTphFg87kKEQ1HF5tON",
+      "acdcSaid": "EBuheH0-3Yd_inDtw7HCdaIqlbPPru14kLl4p8y-jrvU",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T19:31:26.973Z",
+      "sigs": [
+        "0BCQNrbvyzTae0SyENa7IdS5oEy6JhPILV9mGypXq4zmneunUKcyRlO6X2MqCHwzgtcxXFdcpKwbTHXVs7vNO5cF"
+      ]
+    },
+    "anc": {
+      "v": "KERI10JSON000132_",
+      "t": "ixn",
+      "d": "ECRS9VXhnAmqmVdG5A10idCrkXlHPWKdLJOuWwQdwaLa",
+      "i": "DC62W2iX8EUXAo3W0_V-cHRC24TSZQLTomfy8FmZXt_-",
+      "s": "1",
+      "p": "EKScP4qgyiUUlw9f8k0swHUrwGBVcG9TndkMxlnG0OaY",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T18:54:29.822Z"
+    }
+  }
+}
+
+ukgov-natid-clienta
+{
+  "v": "KERI10JSON0005e2_",
+  "t": "exn",
+  "d": "EFzcSX-KJY9mcFt-sH-aqfhOmIfDud2xOUMsWsy8LuGs",
+  "i": "DJLk2dgkOYwnI1h2TOuRiERDubwTnb-PdUno5077R-R7",
+  "rp": "DPGIMIILilRi0rezWNpCTQhiPlBkFxNXaQDTpXbyStJN",
+  "p": "",
+  "dt": "2025-10-10T09:46:49.622000+00:00",
+  "r": "/ipex/grant",
+  "q": {},
+  "a": {
+    "m": "Credential: EDfpEufmixGc...",
+    "i": "DPGIMIILilRi0rezWNpCTQhiPlBkFxNXaQDTpXbyStJN"
+  },
+  "e": {
+    "d": "ELyXTC-YreSX-VEMBIut4D4w8FndxqXGZx-ttcu4tONZ",
+    "acdc": {
+      "v": "ACDC10JSON",
+      "d": "EDfpEufmixGcwqappwImnHZ8brV1TZRIVYVZU4Mdskcy",
+      "i": "DJLk2dgkOYwnI1h2TOuRiERDubwTnb-PdUno5077R-R7",
+      "ri": "EC2UcM87c550SlejE3uxGhmaer51iLLY63OeYBBaBV4h",
+      "s": "EJwk_AiI77akk_0iuluTARQ-9kPknaNQuaKMI3jiDrxD",
+      "a": {
+        "d": "",
+        "i": "DPGIMIILilRi0rezWNpCTQhiPlBkFxNXaQDTpXbyStJN",
+        "idCardNumber": "  589358351",
+        "name": "Antoine Basil",
+        "dob": "1/1/2001"
+      }
+    },
+    "iss": {
+      "v": "KERI10JSON0000ed_",
+      "t": "iss",
+      "d": "EDh7D1r9qkEr5-h2dpLa9sEyhfPB-m-bqGFwRCBgDgWt",
+      "i": "EDfpEufmixGcwqappwImnHZ8brV1TZRIVYVZU4Mdskcy",
+      "s": "0",
+      "dt": "2025-10-09T19:18:47.161000+00:00",
+      "ri": "EC2UcM87c550SlejE3uxGhmaer51iLLY63OeYBBaBV4h",
+      "acdcSaid": "EDfpEufmixGcwqappwImnHZ8brV1TZRIVYVZU4Mdskcy",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T19:18:47.164Z",
+      "sigs": [
+        "0BBBePlIaBYHHj-Mh37P_id9tFzBCNxl-GWqbdGs6K-t7UmZiazkz9JVJpMwctn-XCcAM6LYWCIIOXukqXesr2sH"
+      ]
+    },
+    "anc": {
+      "v": "KERI10JSON000132_",
+      "t": "ixn",
+      "d": "EFS2JGKrMqR4Zrtvb-oXlGMC9hxogwkyDhz9R4oYqmsG",
+      "i": "DJLk2dgkOYwnI1h2TOuRiERDubwTnb-PdUno5077R-R7",
+      "s": "1",
+      "p": "EBVFRug0TNqJVwR48DW1yf9FHA7afToWxAzKH4A3ALwt",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T18:45:22.785Z"
+    }
+  }
+}
+
+
+---
+clientB credentials
+---
+ukgov-natid-clientb
+{
+  "v": "KERI10JSON0005e0_",
+  "t": "exn",
+  "d": "EPrQVGbNtZduCTonQ07wNcwiL1mltjsRAKPWmzpMrt-J",
+  "i": "DJLk2dgkOYwnI1h2TOuRiERDubwTnb-PdUno5077R-R7",
+  "rp": "DCMaBY_Pa_89BnbpEk-0-Uhg2hf-mCXbDpQClHH7sM_P",
+  "p": "",
+  "dt": "2025-10-10T09:47:30.115000+00:00",
+  "r": "/ipex/grant",
+  "q": {},
+  "a": {
+    "m": "Credential: EJgzc5XRm07w...",
+    "i": "DCMaBY_Pa_89BnbpEk-0-Uhg2hf-mCXbDpQClHH7sM_P"
+  },
+  "e": {
+    "d": "EFvNQ7vdzl2XGFBOnsLmJ2uzW5S0Xr4Zw_N-dtCZgUB5",
+    "acdc": {
+      "v": "ACDC10JSON",
+      "d": "EJgzc5XRm07w9ebeuyHFTmXfIdc7ncH7tXwKm4Xw-Upv",
+      "i": "DJLk2dgkOYwnI1h2TOuRiERDubwTnb-PdUno5077R-R7",
+      "ri": "EC2UcM87c550SlejE3uxGhmaer51iLLY63OeYBBaBV4h",
+      "s": "EJwk_AiI77akk_0iuluTARQ-9kPknaNQuaKMI3jiDrxD",
+      "a": {
+        "d": "",
+        "i": "DCMaBY_Pa_89BnbpEk-0-Uhg2hf-mCXbDpQClHH7sM_P",
+        "idCardNumber": "039482983",
+        "name": "Barbara Cyder",
+        "dob": "2/2/2002"
+      }
+    },
+    "iss": {
+      "v": "KERI10JSON0000ed_",
+      "t": "iss",
+      "d": "EMzGzLCkuvLjFtCM535PZjsboPrta7gYuY4H7SbNwAA-",
+      "i": "EJgzc5XRm07w9ebeuyHFTmXfIdc7ncH7tXwKm4Xw-Upv",
+      "s": "0",
+      "dt": "2025-10-09T19:19:15.693000+00:00",
+      "ri": "EC2UcM87c550SlejE3uxGhmaer51iLLY63OeYBBaBV4h",
+      "acdcSaid": "EJgzc5XRm07w9ebeuyHFTmXfIdc7ncH7tXwKm4Xw-Upv",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T19:19:15.699Z",
+      "sigs": [
+        "0BCw9N-KHqXz0qdooKgQyIVnwahrNAf4SI_NhrAy27vcK8GUgeoc9O3_I__-aMNLjKS5mp7nuiVI0e0m6GRNnKsD"
+      ]
+    },
+    "anc": {
+      "v": "KERI10JSON000132_",
+      "t": "ixn",
+      "d": "EFS2JGKrMqR4Zrtvb-oXlGMC9hxogwkyDhz9R4oYqmsG",
+      "i": "DJLk2dgkOYwnI1h2TOuRiERDubwTnb-PdUno5077R-R7",
+      "s": "1",
+      "p": "EBVFRug0TNqJVwR48DW1yf9FHA7afToWxAzKH4A3ALwt",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T18:45:22.785Z"
+    }
+  }
+}
+
+lseg-aml-clientb
+{
+  "v": "KERI10JSON0005a9_",
+  "t": "exn",
+  "d": "EAlK1UqGjxa7n_e_-VQACylXhpFQaHjVwWLZw66M3ON2",
+  "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+  "rp": "DCMaBY_Pa_89BnbpEk-0-Uhg2hf-mCXbDpQClHH7sM_P",
+  "p": "",
+  "dt": "2025-10-10T09:48:00.751000+00:00",
+  "r": "/ipex/grant",
+  "q": {},
+  "a": {
+    "m": "Credential: EH9_h-k7LLO9...",
+    "i": "DCMaBY_Pa_89BnbpEk-0-Uhg2hf-mCXbDpQClHH7sM_P"
+  },
+  "e": {
+    "d": "EHyX_o0ISxZO6df1eKG0vTp18bI4GY9etgNGvqyTodYf",
+    "acdc": {
+      "v": "ACDC10JSON",
+      "d": "EH9_h-k7LLO9WWcapIeuBsZJccX3eYWXzhbLBoDfzH-E",
+      "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+      "ri": "ENNGArgQEGlMu2dJGadv1tg9fS77lHMPDZKWkxYt1Xw8",
+      "s": "EMXNHLMwDTLhuYQH759n9N1jh9Se4PO0GvKS4aNsDsYr",
+      "a": {
+        "d": "",
+        "i": "DCMaBY_Pa_89BnbpEk-0-Uhg2hf-mCXbDpQClHH7sM_P",
+        "isOK": true
+      }
+    },
+    "iss": {
+      "v": "KERI10JSON0000ed_",
+      "t": "iss",
+      "d": "ECtQtdR6iW0YFUeVm4GKN75PcSD8b3JRYkHbu89CoFXW",
+      "i": "EH9_h-k7LLO9WWcapIeuBsZJccX3eYWXzhbLBoDfzH-E",
+      "s": "0",
+      "dt": "2025-10-09T20:06:08.359000+00:00",
+      "ri": "ENNGArgQEGlMu2dJGadv1tg9fS77lHMPDZKWkxYt1Xw8",
+      "acdcSaid": "EH9_h-k7LLO9WWcapIeuBsZJccX3eYWXzhbLBoDfzH-E",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T20:06:08.369Z",
+      "sigs": [
+        "0BDOEjRBP-Hk7awL4uyK8W1MWcAAQ8YyqokOLkmPPfkXpkVcQ7Dc8dHy1qF2PuivPuMWo3o4bMpCtaQO1nV-7RoP"
+      ]
+    },
+    "anc": {
+      "v": "KERI10JSON000132_",
+      "t": "ixn",
+      "d": "EHYDOqqZ9K7DJtLVZ1zwt3-gbZGOAzN9-E8PhgshIk3Y",
+      "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+      "s": "1",
+      "p": "ENCvaPVoeBkXciz2iTlp-XoFKZ25nBAOPm0uGaTIDLDC",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T18:46:23.452Z"
+    }
+  }
+}
+
+lseg-pep-clientb
+{
+  "v": "KERI10JSON0005ab_",
+  "t": "exn",
+  "d": "EFiXTG3llHExn5HbqlokDJO5jLS5Kugp1Y-esj87JcA4",
+  "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+  "rp": "DCMaBY_Pa_89BnbpEk-0-Uhg2hf-mCXbDpQClHH7sM_P",
+  "p": "",
+  "dt": "2025-10-10T09:48:09.375000+00:00",
+  "r": "/ipex/grant",
+  "q": {},
+  "a": {
+    "m": "Credential: EHw8ubbCxOUV...",
+    "i": "DCMaBY_Pa_89BnbpEk-0-Uhg2hf-mCXbDpQClHH7sM_P"
+  },
+  "e": {
+    "d": "EIxXftzLXNtGrrt3Vpdf_TQfHTZ7HQZAdEhh9sLuHhfg",
+    "acdc": {
+      "v": "ACDC10JSON",
+      "d": "EHw8ubbCxOUVp6QMyqydhYqzjab1RgonS76t09ZRwAt4",
+      "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+      "ri": "ENNGArgQEGlMu2dJGadv1tg9fS77lHMPDZKWkxYt1Xw8",
+      "s": "EFlVixHXRedd8tyyG2gnzacAklg0orm523UAkCt4d2iN",
+      "a": {
+        "d": "",
+        "i": "DCMaBY_Pa_89BnbpEk-0-Uhg2hf-mCXbDpQClHH7sM_P",
+        "isPEP": false
+      }
+    },
+    "iss": {
+      "v": "KERI10JSON0000ed_",
+      "t": "iss",
+      "d": "ENnDDheNCvHKhSIoaEE0X3XGZPqGWqJ-sLIL_S2HvHmo",
+      "i": "EHw8ubbCxOUVp6QMyqydhYqzjab1RgonS76t09ZRwAt4",
+      "s": "0",
+      "dt": "2025-10-09T20:08:34.863000+00:00",
+      "ri": "ENNGArgQEGlMu2dJGadv1tg9fS77lHMPDZKWkxYt1Xw8",
+      "acdcSaid": "EHw8ubbCxOUVp6QMyqydhYqzjab1RgonS76t09ZRwAt4",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T20:08:34.868Z",
+      "sigs": [
+        "0BDtQ4hxSk1-G9b9_kn91zfYMbT9PlYIjvqSdEKwwZEY2575CSkeYWfXx5KjW8DcQOLo0fYOoZ347vTP6FBChS8E"
+      ]
+    },
+    "anc": {
+      "v": "KERI10JSON000132_",
+      "t": "ixn",
+      "d": "EHYDOqqZ9K7DJtLVZ1zwt3-gbZGOAzN9-E8PhgshIk3Y",
+      "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+      "s": "1",
+      "p": "ENCvaPVoeBkXciz2iTlp-XoFKZ25nBAOPm0uGaTIDLDC",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T18:46:23.452Z"
+    }
+  }
+}
+
+gleif-lei-clientb
+{
+  "v": "KERI10JSON000619_",
+  "t": "exn",
+  "d": "ENEHPoKWEaWuPG7ZJ6Jrg8KayhCKOGXSH-kt1dPtdhwx",
+  "i": "DC62W2iX8EUXAo3W0_V-cHRC24TSZQLTomfy8FmZXt_-",
+  "rp": "DCMaBY_Pa_89BnbpEk-0-Uhg2hf-mCXbDpQClHH7sM_P",
+  "p": "",
+  "dt": "2025-10-10T09:48:59.418000+00:00",
+  "r": "/ipex/grant",
+  "q": {},
+  "a": {
+    "m": "Credential: EKhHNWA8mo6c...",
+    "i": "DCMaBY_Pa_89BnbpEk-0-Uhg2hf-mCXbDpQClHH7sM_P"
+  },
+  "e": {
+    "d": "EPcRdQXRy8QH8zr27wh5X6wMJdZiaqztq0x_YHkZ091P",
+    "acdc": {
+      "v": "ACDC10JSON",
+      "d": "EKhHNWA8mo6cLDfNItNgNuVzoXkS1Y4OFiJ1vD0wLN6C",
+      "i": "DC62W2iX8EUXAo3W0_V-cHRC24TSZQLTomfy8FmZXt_-",
+      "ri": "EPaaQgFetKuCg_wYuwV5mGoZTkTphFg87kKEQ1HF5tON",
+      "s": "EIKWCQM_I6K0birfObtDmwDZA5XN4AHuI5A8KbROJXSM",
+      "a": {
+        "d": "",
+        "i": "DCMaBY_Pa_89BnbpEk-0-Uhg2hf-mCXbDpQClHH7sM_P",
+        "lei": "10482948294",
+        "legalEntityName": "Zorca Finance Ltd",
+        "legalEntityRegistrationNumber": "GB1283924",
+        "isoCountryCode": "GB"
+      }
+    },
+    "iss": {
+      "v": "KERI10JSON0000ed_",
+      "t": "iss",
+      "d": "EBlkWLe5WfQOWCE01f0bFei_fXkDSEjqt25kKswVpZRq",
+      "i": "EKhHNWA8mo6cLDfNItNgNuVzoXkS1Y4OFiJ1vD0wLN6C",
+      "s": "0",
+      "dt": "2025-10-09T19:32:06.122000+00:00",
+      "ri": "EPaaQgFetKuCg_wYuwV5mGoZTkTphFg87kKEQ1HF5tON",
+      "acdcSaid": "EKhHNWA8mo6cLDfNItNgNuVzoXkS1Y4OFiJ1vD0wLN6C",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T19:32:06.130Z",
+      "sigs": [
+        "0BBnFCHwgHJSYoWHiEw092BJwEh3qKV12RMTjnbv8tNYIHbyPXIoGOjIiE6Vg3U3cKYzspzSmpGJSRqYsO85JsIB"
+      ]
+    },
+    "anc": {
+      "v": "KERI10JSON000132_",
+      "t": "ixn",
+      "d": "ECRS9VXhnAmqmVdG5A10idCrkXlHPWKdLJOuWwQdwaLa",
+      "i": "DC62W2iX8EUXAo3W0_V-cHRC24TSZQLTomfy8FmZXt_-",
+      "s": "1",
+      "p": "EKScP4qgyiUUlw9f8k0swHUrwGBVcG9TndkMxlnG0OaY",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T18:54:29.822Z"
+    }
+  }
+}
+
+
+
+
+
+---
+clientX credentials
+---
+ukgov-natid-clientx
+{
+  "v": "KERI10JSON000615_",
+  "t": "exn",
+  "d": "EJl-5aZqO027aS7Pi_eGe0-Jl9Q1ygUbSnxo2tcTOORV",
+  "i": "DJLk2dgkOYwnI1h2TOuRiERDubwTnb-PdUno5077R-R7",
+  "rp": "DEvIkbD4u9FHXoAxSMVZirvzk8SE5oT0tD7nHs1DFdre",
+  "p": "",
+  "dt": "2025-10-10T10:32:56.539000+00:00",
+  "r": "/ipex/grant",
+  "q": {},
+  "a": {
+    "m": "Credential: ENJhX7dpsy3R...",
+    "i": "DEvIkbD4u9FHXoAxSMVZirvzk8SE5oT0tD7nHs1DFdre"
+  },
+  "e": {
+    "d": "EOEuSONbOeUUuWnSwK77z6rXZUS7ib3yWPMj0U8gcwNA",
+    "acdc": {
+      "v": "ACDC10JSON",
+      "d": "ENJhX7dpsy3R-Dm43lFQmeCnMSMMRMm5ND4JKI5l55FT",
+      "i": "DJLk2dgkOYwnI1h2TOuRiERDubwTnb-PdUno5077R-R7",
+      "ri": "EC2UcM87c550SlejE3uxGhmaer51iLLY63OeYBBaBV4h",
+      "s": "EJwk_AiI77akk_0iuluTARQ-9kPknaNQuaKMI3jiDrxD",
+      "a": {
+        "d": "",
+        "i": "DEvIkbD4u9FHXoAxSMVZirvzk8SE5oT0tD7nHs1DFdre",
+        "idCardNumber": "842948294",
+        "name": "Xavier Dorsal",
+        "dob": "3/3/2003"
+      }
+    },
+    "iss": {
+      "v": "KERI10JSON0000ed_",
+      "t": "iss",
+      "d": "EOwomaoyktX5UkfgZTtMsFx2pLm7V72odSonCbPHR3_j",
+      "i": "ENJhX7dpsy3R-Dm43lFQmeCnMSMMRMm5ND4JKI5l55FT",
+      "s": "0",
+      "dt": "2025-10-09T19:30:16.856000+00:00",
+      "ri": "EC2UcM87c550SlejE3uxGhmaer51iLLY63OeYBBaBV4h",
+      "acdcSaid": "ENJhX7dpsy3R-Dm43lFQmeCnMSMMRMm5ND4JKI5l55FT",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T19:30:16.872Z",
+      "sigs": [
+        "0BBn-buVawULu_XMUAZZsMo673OTVw8tIvhcQcs2XBCDvt5HabvpppqhMhw-oQDSOS1CLOAcW6_64LRnfMvr1tYF"
+      ]
+    },
+    "anc": {
+      "v": "KERI10JSON000132_",
+      "t": "ixn",
+      "d": "EFS2JGKrMqR4Zrtvb-oXlGMC9hxogwkyDhz9R4oYqmsG",
+      "i": "DJLk2dgkOYwnI1h2TOuRiERDubwTnb-PdUno5077R-R7",
+      "s": "1",
+      "p": "EBVFRug0TNqJVwR48DW1yf9FHA7afToWxAzKH4A3ALwt",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T18:45:22.785Z",
+      "k": [
+        "DJLk2dgkOYwnI1h2TOuRiERDubwTnb-PdUno5077R-R7"
+      ]
+    }
+  }
+}
+
+lseg-aml-clientx
+{
+  "v": "KERI10JSON0005de_",
+  "t": "exn",
+  "d": "EDcD08Aupd0XN4YGLa4xrbjjkVvB92nA1zbT4IZXUTQT",
+  "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+  "rp": "DEvIkbD4u9FHXoAxSMVZirvzk8SE5oT0tD7nHs1DFdre",
+  "p": "",
+  "dt": "2025-10-10T10:34:08.054000+00:00",
+  "r": "/ipex/grant",
+  "q": {},
+  "a": {
+    "m": "Credential: EEo8uT4DxBO9...",
+    "i": "DEvIkbD4u9FHXoAxSMVZirvzk8SE5oT0tD7nHs1DFdre"
+  },
+  "e": {
+    "d": "EGBJIjiI4b1J8wCZoEoJxpgFsACD1vhc-T-LrxKR6Uuz",
+    "acdc": {
+      "v": "ACDC10JSON",
+      "d": "EEo8uT4DxBO9Ds7ptkhHLJpPP81CTCjJmKTXyyG0mU3Y",
+      "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+      "ri": "ENNGArgQEGlMu2dJGadv1tg9fS77lHMPDZKWkxYt1Xw8",
+      "s": "EMXNHLMwDTLhuYQH759n9N1jh9Se4PO0GvKS4aNsDsYr",
+      "a": {
+        "d": "",
+        "i": "DEvIkbD4u9FHXoAxSMVZirvzk8SE5oT0tD7nHs1DFdre",
+        "isOK": true
+      }
+    },
+    "iss": {
+      "v": "KERI10JSON0000ed_",
+      "t": "iss",
+      "d": "ELJO8GNJTyof2QmZjrHnLwaNCq35R0Ybg-vIvlGaYNQZ",
+      "i": "EEo8uT4DxBO9Ds7ptkhHLJpPP81CTCjJmKTXyyG0mU3Y",
+      "s": "0",
+      "dt": "2025-10-09T20:06:22.670000+00:00",
+      "ri": "ENNGArgQEGlMu2dJGadv1tg9fS77lHMPDZKWkxYt1Xw8",
+      "acdcSaid": "EEo8uT4DxBO9Ds7ptkhHLJpPP81CTCjJmKTXyyG0mU3Y",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T20:06:22.672Z",
+      "sigs": [
+        "0BBDqjlip54uoHzmodnDJoPAz4Zcpe4hY_ZxVAl15aV2b86q1bLSOUbZH4SKeuGMc4A3dJDwhLEPVCgE5LIX1ScH"
+      ]
+    },
+    "anc": {
+      "v": "KERI10JSON000132_",
+      "t": "ixn",
+      "d": "EHYDOqqZ9K7DJtLVZ1zwt3-gbZGOAzN9-E8PhgshIk3Y",
+      "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+      "s": "1",
+      "p": "ENCvaPVoeBkXciz2iTlp-XoFKZ25nBAOPm0uGaTIDLDC",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T18:46:23.452Z",
+      "k": [
+        "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1"
+      ]
+    }
+  }
+}
+
+lseg-pep-clientx
+{
+  "v": "KERI10JSON0005e0_",
+  "t": "exn",
+  "d": "EMXjm6btvKRz1QY1USpmVA3pYiGbQ9d1iQE6TLcOBdHy",
+  "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+  "rp": "DEvIkbD4u9FHXoAxSMVZirvzk8SE5oT0tD7nHs1DFdre",
+  "p": "",
+  "dt": "2025-10-10T10:34:30.309000+00:00",
+  "r": "/ipex/grant",
+  "q": {},
+  "a": {
+    "m": "Credential: EN7jgJytn9Ag...",
+    "i": "DEvIkbD4u9FHXoAxSMVZirvzk8SE5oT0tD7nHs1DFdre"
+  },
+  "e": {
+    "d": "EKgkkC4nXxjTwUaPm7N6xhuX6AMH-WELGkIWL1bwsuIS",
+    "acdc": {
+      "v": "ACDC10JSON",
+      "d": "EN7jgJytn9Agw8N6SJGoYuu0qRJ_nlRakkMWDm3f4Wkn",
+      "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+      "ri": "ENNGArgQEGlMu2dJGadv1tg9fS77lHMPDZKWkxYt1Xw8",
+      "s": "EFlVixHXRedd8tyyG2gnzacAklg0orm523UAkCt4d2iN",
+      "a": {
+        "d": "",
+        "i": "DEvIkbD4u9FHXoAxSMVZirvzk8SE5oT0tD7nHs1DFdre",
+        "isPEP": false
+      }
+    },
+    "iss": {
+      "v": "KERI10JSON0000ed_",
+      "t": "iss",
+      "d": "ENRLnw1tg_fqdEEa72r7cYJ-PFFHrar4VIziXj3AivEC",
+      "i": "EN7jgJytn9Agw8N6SJGoYuu0qRJ_nlRakkMWDm3f4Wkn",
+      "s": "0",
+      "dt": "2025-10-09T20:08:50.146000+00:00",
+      "ri": "ENNGArgQEGlMu2dJGadv1tg9fS77lHMPDZKWkxYt1Xw8",
+      "acdcSaid": "EN7jgJytn9Agw8N6SJGoYuu0qRJ_nlRakkMWDm3f4Wkn",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T20:08:50.151Z",
+      "sigs": [
+        "0BBAn3gqWWliCjLacTznu7lAu9FZaH5s0vE2k_EZJy9B5FYrXPErsLT8I1yExv488SffrI5LvQyH7fl5ZfNmYhoB"
+      ]
+    },
+    "anc": {
+      "v": "KERI10JSON000132_",
+      "t": "ixn",
+      "d": "EHYDOqqZ9K7DJtLVZ1zwt3-gbZGOAzN9-E8PhgshIk3Y",
+      "i": "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1",
+      "s": "1",
+      "p": "ENCvaPVoeBkXciz2iTlp-XoFKZ25nBAOPm0uGaTIDLDC",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T18:46:23.452Z",
+      "k": [
+        "DBeAmTrK0rpux8AQboaid-QkJ7M0-GlCea7ftQ5oS9c1"
+      ]
+    }
+  }
+}
+
+gleif-lei-clientx
+{
+  "v": "KERI10JSON000649_",
+  "t": "exn",
+  "d": "EMCMfhtIdLEIt3XNqKiqzbYwWlV3AIEeq8FEYTNto-Vi",
+  "i": "DC62W2iX8EUXAo3W0_V-cHRC24TSZQLTomfy8FmZXt_-",
+  "rp": "DEvIkbD4u9FHXoAxSMVZirvzk8SE5oT0tD7nHs1DFdre",
+  "p": "",
+  "dt": "2025-10-10T10:34:52.453000+00:00",
+  "r": "/ipex/grant",
+  "q": {},
+  "a": {
+    "m": "Credential: EM2kv2OsJFlS...",
+    "i": "DEvIkbD4u9FHXoAxSMVZirvzk8SE5oT0tD7nHs1DFdre"
+  },
+  "e": {
+    "d": "EAcoJjP_jYQxJ6eHia83dGS-Yiy0UMm7KR00WEB_cwhR",
+    "acdc": {
+      "v": "ACDC10JSON",
+      "d": "EM2kv2OsJFlS0ExB0RZKt4ivFaRpsZm7aUIqkOf7eIwu",
+      "i": "DC62W2iX8EUXAo3W0_V-cHRC24TSZQLTomfy8FmZXt_-",
+      "ri": "EPaaQgFetKuCg_wYuwV5mGoZTkTphFg87kKEQ1HF5tON",
+      "s": "EIKWCQM_I6K0birfObtDmwDZA5XN4AHuI5A8KbROJXSM",
+      "a": {
+        "d": "",
+        "i": "DEvIkbD4u9FHXoAxSMVZirvzk8SE5oT0tD7nHs1DFdre",
+        "lei": "58395839928",
+        "legalEntityName": "Argonaut Ltd",
+        "legalEntityRegistrationNumber": "GB8398293",
+        "isoCountryCode": "GB"
+      }
+    },
+    "iss": {
+      "v": "KERI10JSON0000ed_",
+      "t": "iss",
+      "d": "ELWsZE7UoI6LmSN0D8wvv41ocTxFLVPYbDCQv_WnIdbF",
+      "i": "EM2kv2OsJFlS0ExB0RZKt4ivFaRpsZm7aUIqkOf7eIwu",
+      "s": "0",
+      "dt": "2025-10-09T19:32:44.903000+00:00",
+      "ri": "EPaaQgFetKuCg_wYuwV5mGoZTkTphFg87kKEQ1HF5tON",
+      "acdcSaid": "EM2kv2OsJFlS0ExB0RZKt4ivFaRpsZm7aUIqkOf7eIwu",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T19:32:44.906Z",
+      "sigs": [
+        "0BAk2U88zZAa7Li_pwJKlfKGG1A0QHcokHGBOwg3FXSAUCfzCd1ZIGJqG0oeGo-s7Xxv_JH_ZCdWL6Mw7bT-nL4E"
+      ]
+    },
+    "anc": {
+      "v": "KERI10JSON000132_",
+      "t": "ixn",
+      "d": "ECRS9VXhnAmqmVdG5A10idCrkXlHPWKdLJOuWwQdwaLa",
+      "i": "DC62W2iX8EUXAo3W0_V-cHRC24TSZQLTomfy8FmZXt_-",
+      "s": "1",
+      "p": "EKScP4qgyiUUlw9f8k0swHUrwGBVcG9TndkMxlnG0OaY",
+      "cesrEncoding": "binary",
+      "ingestedAt": "2025-10-09T18:54:29.822Z",
+      "k": [
+        "DC62W2iX8EUXAo3W0_V-cHRC24TSZQLTomfy8FmZXt_-"
+      ]
+    }
+  }
+}

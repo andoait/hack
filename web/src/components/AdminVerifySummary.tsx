@@ -1,10 +1,10 @@
-import { funds, identitiesSought } from '@shared/constants'
+import { employeeNumber, funds, identitiesSought } from '@shared/constants'
 import { useAppContext } from '../AppProvider'
 import { useState } from 'react'
 
 const AdminVerifySummary = () => {
   const [thinger, setThinger] = useState(false)
-  const { selectedFundIdx, accountId } = useAppContext()
+  const { selectedFundIdx, accountId, aids } = useAppContext()
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-8 bg-gray-50 rounded-lg shadow-md">
@@ -45,12 +45,14 @@ const AdminVerifySummary = () => {
         disabled={thinger}
         onClick={async () => {
           setThinger(true)
+
           const result = await fetch('/api/whitelist', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               accountId,
               tokenAddress: funds[selectedFundIdx]?.address,
+              auditHash: await sha256(`${employeeNumber}${aids.join(',')}`) // sha256 of the concatenation of the employee number and all aids used in the verification
             }),
           })
           const data = await result.json()
@@ -63,6 +65,13 @@ const AdminVerifySummary = () => {
       </button>
     </div>
   )
+}
+const sha256 = async (plaintext: string): Promise<string> => {
+  const encoder = new TextEncoder()
+  const dataToHash = encoder.encode(plaintext)
+  const hashBuffer = await window.crypto.subtle.digest('SHA-256', dataToHash)
+  const hashArray = Array.from(new Uint8Array(hashBuffer))
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('')
 }
 
 export default AdminVerifySummary

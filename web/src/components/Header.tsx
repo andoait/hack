@@ -1,7 +1,8 @@
 import { useNavigate } from 'react-router'
 import { useAppContext } from '../AppProvider'
+import { employeeNumber } from '@shared/constants'
 
-const userName = 'STEX Employee 389183'
+const userName = `STEX Employee ${employeeNumber}`
 
 const Header = () => {
   const navigate = useNavigate()

@@ -5,6 +5,8 @@ const auditTopicId = '0.0.6990935' // STEX audit log
 const operatorKeyType: hederaKeyType = 'ed25519'
 const network: hederaNetwork = 'testnet'
 
+const employeeNumber = '389183'
+
 const funds = [
   { name: 'Gold Fund', symbol: 'GOLD_STEX', address: '0.0.6975418', network: 'testnet', description: 'A diversified fund with exposure to physical gold, senior/junior miners, gold derivatives (including options) and global venue exposure (London, Shanghai, Switzerland, etc.)' },
   { name: 'AI Asia Fund', symbol: 'AI_ASIA_STEX', address: '0.0.6975419', network: 'testnet', description: 'Exposure to new and emerging AI companies in Asia. No more than 50% exposure to China.' },
@@ -66,5 +68,6 @@ export {
   identitiesSought,
   funds,
   suggestedAddresses,
-  suggestedSAIDs
+  suggestedSAIDs,
+  employeeNumber
 }

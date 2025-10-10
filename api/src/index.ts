@@ -1,6 +1,7 @@
 import Fastify from 'fastify'
 import { tokenAddKycAccountId } from './lib/hedera/tokenAddKycAccountId.ts'
 import { tokenRevokeKycAccountId } from './lib/hedera/tokenRevokeKycAccountId.ts'
+import { logAuditTrail } from './lib/hedera/auditLog.ts'
 
 const fastify = Fastify({
   logger: true
@@ -35,10 +36,10 @@ fastify.post<{ Body: { accountId: string; tokenAddress: string } }>(
   }
 )
 
-fastify.post<{ Body: { accountId: string; tokenAddress: string } }>(
+fastify.post<{ Body: { accountId: string; tokenAddress: string; auditHash: string } }>(
   "/revoke",
   async (request, reply) => {
-    const { accountId, tokenAddress } = request.body
+    const { accountId, tokenAddress, auditHash } = request.body
 
     if (!accountId || !tokenAddress) {
       const response: Response = {
@@ -51,6 +52,9 @@ fastify.post<{ Body: { accountId: string; tokenAddress: string } }>(
 
     try {
       const result = await tokenRevokeKycAccountId(tokenAddress, accountId)
+      // audit log on HCS:
+      const resultAudit = await logAuditTrail(`${auditHash}`)
+      console.log(resultAudit)
 
       const response: Response = {
         error: 0,
